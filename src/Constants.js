@@ -13,9 +13,18 @@ var Constants = {
         [{x:256, y:1023}, {x:515, y:1066}, {x:777, y:1047}, {x:1028, y:1081}, {x:1313, y:1033}],
         [{x:211, y:823}, {x:488, y:773}, {x:769, y:786}, {x:1012, y:815}, null]
     ]
+};
+
+var Config = {
+    ls: null,
+    default_bg: "space",
+    default_princess: "pink",
+
+    init: function(){
+        this.ls = cc.sys.localStorage;
+        this.ls.setItem('bg', this.default_bg);
+        this.ls.setItem('princess', this.default_princess);
+    }
 }
 
-var config = {
-    bg: "space",
-    princess: "pink"
-}
+Config.init();

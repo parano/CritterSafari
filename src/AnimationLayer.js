@@ -46,8 +46,28 @@ var AnimationLayer = cc.Layer.extend({
                             that.move('reset');
                             break;
 
-                        case 68:
+                        case 67: // press c
+                            that.changeBg();
+                            break;
+
+                        // actions:
+                        case 68: // press d
                             that.actionDancing();
+                            break;
+                        case 83: // press s
+                            that.actionSleep();
+                            break;
+                        case 85: // press u
+                            that.actionDressUp();
+                            break;
+                        case 77: // press m
+                            that.actionMagic()
+                            break;
+                        case 76: // press l
+                            that.actionLove();
+                            break;
+                        case 84: // press t
+                            that.actionTantrum();
                             break;
                     }
                 }
@@ -155,6 +175,37 @@ var AnimationLayer = cc.Layer.extend({
     },
 
     actionDancing: function() {
+        cc.log(Config.ls.getItem('bg'));
+    },
 
+    actionSleep: function() {
+        cc.log("sleeping");
+    },
+
+    actionMagic: function() {
+        cc.log("magic");
+    },
+
+    actionDressUp: function() {
+        cc.log("dressup");
+    },
+
+    actionLove: function() {
+        cc.log("love");
+    },
+
+    actionTantrum: function() {
+        cc.log("Tantrum");
+    },
+
+    changeBg: function () {
+        // background setting stores in local storage
+        // implemented in Constants.js
+        if(Config.ls.getItem('bg') === 'space') {
+            Config.ls.setItem('bg', 'forest');
+        } else {
+            Config.ls.setItem('bg', 'space');
+        }
+        cc.game.run();
     }
 });
