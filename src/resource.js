@@ -1,16 +1,16 @@
 var res = {
     GameBoard_Space_png : "res/GameBoard_Space.png",
-    pink_princess_png   : "res/pink_princess.png",
-    pink_princess_plist : "res/pink_princess.plist"
+    princess_png   : "res/princess.png",
+    princess_plist : "res/princess.plist"
 };
 
 var g_resources = [
     //image
     res.GameBoard_Space_png,
-    res.pink_princess_png,
+    res.princess_png,
 
     //plist
-    res.pink_princess_plist
+    res.princess_plist
 
     //fnt
 

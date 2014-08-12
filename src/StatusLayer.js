@@ -2,9 +2,9 @@
  * Created by maccha on 8/10/14.
  */
 var StatusLayer = cc.Layer.extend({
-    labelCoin:null,
-    labelMeter:null,
-    coins:0,
+    labelCoin: null,
+    labelMeter: null,
+    coins: 0,
 
     ctor:function () {
         this._super();

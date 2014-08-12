@@ -11,7 +11,7 @@
     "modules" : ["menus"],
 
     "jsList" : [
-        "src/resource.js",
-        "src/app.js"
+        "src/Resource.js",
+        "src/App.js"
     ]
 }

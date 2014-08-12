@@ -26,28 +26,37 @@ var AnimationLayer = cc.Layer.extend({
                 onKeyReleased: function (key, event) {
                     //cc.log("Key up:" + key);
                     switch(key){
+                        // move princess
                         case 37: // press left arrow
                             that.move('left');
                             break;
-
                         case 38: //press up arrow
                             that.move('up');
                             break;
-
                         case 39: // press right arrow
                             that.move('right');
                             break;
-
                         case 40: // press down arrow
                             that.move('down');
                             break;
-
                         case 32: // press space
                             that.move('reset');
                             break;
 
+                        // change background
                         case 67: // press c
                             that.changeBg();
+                            break;
+
+                        // change princess
+                        case 49: // press 1
+                            that.changePrincess("pink");
+                            break;
+                        case 50: // press 2
+                            that.changePrincess("pink");
+                            break;
+                        case 51: // press 3
+                            that.changePrincess("pink");
                             break;
 
                         // actions:
@@ -79,8 +88,8 @@ var AnimationLayer = cc.Layer.extend({
 
     initSprite: function() {
         // create sprite sheet
-        cc.spriteFrameCache.addSpriteFrames(res.pink_princess_plist);
-        this.spriteSheet = cc.SpriteBatchNode.create(res.pink_princess_png);
+        cc.spriteFrameCache.addSpriteFrames(res.princess_plist);
+        this.spriteSheet = cc.SpriteBatchNode.create(res.princess_png);
         this.addChild(this.spriteSheet);
 
 
@@ -175,7 +184,10 @@ var AnimationLayer = cc.Layer.extend({
     },
 
     actionDancing: function() {
-        cc.log(Config.ls.getItem('bg'));
+        cc.log("Dancing");
+
+
+        this.updatePosition(0.1);
     },
 
     actionSleep: function() {
@@ -200,12 +212,17 @@ var AnimationLayer = cc.Layer.extend({
 
     changeBg: function () {
         // background setting stores in local storage
-        // implemented in Constants.js
+        // implemented in GameConfig.js
         if(Config.ls.getItem('bg') === 'space') {
             Config.ls.setItem('bg', 'forest');
         } else {
             Config.ls.setItem('bg', 'space');
         }
+        cc.game.run();
+    },
+    
+    changePrincess: function (princess) {
+        Config.ls.setItem('princess', princess);
         cc.game.run();
     }
 });
