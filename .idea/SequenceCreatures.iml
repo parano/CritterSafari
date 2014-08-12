@@ -5,6 +5,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Cocos2D" level="project" />
+    <orderEntry type="library" name="underscore.js" level="project" />
   </component>
 </module>
 

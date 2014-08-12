@@ -9,6 +9,7 @@ var AnimationLayer = cc.Layer.extend({
     s: null,
     row: 4,
     col: 0,
+    tileMatrix: null,
 
     ctor: function () {
         this._super();
@@ -118,16 +119,22 @@ var AnimationLayer = cc.Layer.extend({
         this._super();
         this.s = cc.director.getWinSize();
 
+        if(Config.ls.getItem('bg') === 'space') {
+            this.tileMatrix = Constants.space_matrix;
+        } else {
+            this.tileMatrix = Constants.forest_matrix;
+        }
+
         this.initController();
         this.initSprite();
     },
 
     px: function() {
-        return Constants.space_matrix[this.row][this.col].x * this.scaleRatioX();
+        return this.tileMatrix[this.row][this.col].x * this.scaleRatioX();
     },
 
     py: function() {
-        return Constants.space_matrix[this.row][this.col].y * this.scaleRatioY();
+        return this.tileMatrix[this.row][this.col].y * this.scaleRatioY();
     },
 
     scaleRatioX: function() {
@@ -144,7 +151,7 @@ var AnimationLayer = cc.Layer.extend({
         this.sprite.runAction(cc.MoveTo.create(
             duration,
             cc.p(this.px(),this.py())
-        ));
+        ).easing(cc.easeInOut(2)));
     },
 
     resetPrincess: function() {
@@ -156,22 +163,22 @@ var AnimationLayer = cc.Layer.extend({
     move: function(direction) {
         switch(direction) {
             case "left":
-                if(this.col>0 && Constants.space_matrix[this.row][this.col-1] != null) {
+                if(this.col>0 && this.tileMatrix[this.row][this.col-1] != null) {
                     this.col -= 1;
                 }
                 break;
             case "right":
-                if(this.col<4 && Constants.space_matrix[this.row][this.col+1] != null) {
+                if(this.col<4 && this.tileMatrix[this.row][this.col+1] != null) {
                     this.col += 1;
                 }
                 break;
             case "up":
-                if(this.row>0 && Constants.space_matrix[this.row-1][this.col] != null) {
+                if(this.row>0 && this.tileMatrix[this.row-1][this.col] != null) {
                     this.row -= 1;
                 }
                 break;
             case "down":
-                if(this.row<4 && Constants.space_matrix[this.row+1][this.col] != null) {
+                if(this.row<4 && this.tileMatrix[this.row+1][this.col] != null) {
                     this.row += 1;
                 }
                 break;

@@ -1,5 +1,6 @@
 var res = {
-    GameBoard_Space_png : "res/GameBoard_Space.png",
+    GameBoard_space_png : "res/GameBoard_Space.png",
+    GameBoard_forest_png: "res/GameBoard_forest.png",
     princess_png        : "res/princess.png",
     princess_plist      : "res/princess.plist",
 
@@ -9,7 +10,8 @@ var res = {
 
 var g_resources = [
     //image
-    res.GameBoard_Space_png,
+    res.GameBoard_space_png,
+    res.GameBoard_forest_png,
     res.princess_png,
 
     //plist
