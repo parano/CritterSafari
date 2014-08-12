@@ -184,9 +184,12 @@ var AnimationLayer = cc.Layer.extend({
     },
 
     actionDancing: function() {
-        cc.log("Dancing");
+        cc.log("Dancing Playing");
 
+        this.sprite.stopAllActions();
+        this.sprite.runAction();
 
+        AudioPlayer.playDancingEffect();
         this.updatePosition(0.1);
     },
 
@@ -199,7 +202,7 @@ var AnimationLayer = cc.Layer.extend({
     },
 
     actionDressUp: function() {
-        cc.log("dressup");
+        cc.log("dress up");
     },
 
     actionLove: function() {
