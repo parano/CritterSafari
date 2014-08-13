@@ -13,9 +13,32 @@ var AudioPlayer = {
     },
 
     playDancingEffect: function(){
-        cc.log("dancing sound effect playing...");
+        //cc.log("dancing sound effect playing...");
+        this.audioEngine.playMusic(res.effect_test_mp3, false);
+    },
+
+    playMagicEffect: function(){
+        this.audioEngine.playMusic(res.effect_test_mp3, false);
+    },
+
+    playTantrumEffect: function(){
+        this.audioEngine.playMusic(res.effect_test_mp3, false);
+    },
+
+    playLoveEffect: function(){
+        this.audioEngine.playMusic(res.effect_test_mp3, false);
+    },
+
+    playSleepEffect: function(){
+        this.audioEngine.playMusic(res.effect_test_mp3, false);
+    },
+
+    playDressUpEffect: function(){
         this.audioEngine.playMusic(res.effect_test_mp3, false);
     }
+
+
+
 };
 
 AudioPlayer.init();

@@ -43,6 +43,7 @@ var AnimationLayer = cc.Layer.extend({
                             break;
                         case 32: // press space
                             that.move('reset');
+                            that.resetStyle(0.1);
                             break;
 
                         // change background
@@ -160,23 +161,33 @@ var AnimationLayer = cc.Layer.extend({
             duration,
             cc.p(this.px(),this.py())
         ).easing(cc.easeInOut(2)));
+
+        // reset style and clean particles
+        this.resetStyle(duration);
     },
 
     resetStyle: function(delay) {
         var that = this;
 
+        this.delay(delay, function() {
+            that.sprite.stopAllActions();
+            while(that.emitters.length > 0) {
+                that.removeChild(that.emitters.pop());
+            }
+            that.sprite.attr({
+                rotation: 0,
+                x: that.px(),
+                y: that.py()//,
+            });
+            that.sprite.runAction(that.runningAction);
+        });
+    },
+
+    delay: function(delay, func) {
         this.sprite.runAction(
             cc.Sequence.create(
                 cc.DelayTime.create(delay),
-                cc.CallFunc.create(function() {
-                    that.sprite.stopAllActions();
-                    that.sprite.attr({
-                        rotation: 0,
-                        x: that.px(),
-                        y: that.py()//,
-                    });
-                    that.sprite.runAction(that.runningAction);
-                })
+                cc.CallFunc.create(func)
             )
         );
     },
@@ -229,44 +240,121 @@ var AnimationLayer = cc.Layer.extend({
         //    cc.RotateTo.create(0.5, 90)
         //);
 
-        var cx = this.px(),
-            cy = this.py();
+        var animationDuration = 4;
         var jumpByRight = cc.JumpBy.create(1, cc.p(50, 0),30, 2);
         var jumpByLeft = cc.JumpBy.create(1, cc.p(-50, 0), 30, 2);
 
         var jumpAction = cc.Sequence.create(
             jumpByRight, jumpByLeft, jumpByLeft, jumpByRight);
 
-        this.sprite.stopAllActions();
+        //this.sprite.stopAllActions();
         this.sprite.runAction(
-            cc.Spawn.create(
-                cc.Repeat.create(cc.Animate.create(this.animation),10),
+            //cc.Spawn.create(
+                //cc.Repeat.create(cc.Animate.create(this.animation),10),
                 jumpAction
-            )
+            //)
         );
 
         AudioPlayer.playDancingEffect();
-        this.resetStyle(4);
+        this.resetStyle(animationDuration);
     },
 
-    actionSleep: function() {
-        cc.log("sleeping");
-    },
-
+    emitters: [],
     actionMagic: function() {
         cc.log("magic");
-    },
 
-    actionDressUp: function() {
-        cc.log("dress up");
-    },
+        var animationDuration = 4;
+        var distance = 25;
+        var array = [
+            cc.p(0, 0),
+            cc.p(-1.5*distance, distance),
+            cc.p(-1.5*distance, -distance),
+            cc.p(1.5*distance, distance),
+            cc.p(1.5*distance, -distance),
+            cc.p(0, 0)
+        ];
 
-    actionLove: function() {
-        cc.log("love");
+        this.sprite.runAction(
+            cc.CardinalSplineBy.create(1.8, array, 1.1).repeat(2)
+        );
+
+        var emitter = cc.ParticleSystem.create(res.phoenix_plist);
+        this.emitters.push(emitter);
+        this.addChild(emitter, 10);
+
+        emitter.attr({
+            scaleX: this.scaleRatioX()*2,
+            scaleY: this.scaleRatioY()*2,
+            x: this.px(),
+            y: this.py()
+        });
+
+        var that = this;
+        this.delay(animationDuration-0.5, function(){
+            while(that.emitters.length > 0) {
+                that.removeChild(that.emitters.pop());
+            }
+        });
+
+        AudioPlayer.playMagicEffect();
+        this.resetStyle(animationDuration);
     },
 
     actionTantrum: function() {
         cc.log("Tantrum");
+
+        var animationDuration = 4;
+        var distance = 13;
+        var array = [
+            cc.p(0, 0),
+            cc.p(-distance, 2*distance),
+            cc.p(0, 0),
+            cc.p(distance, 2*distance),
+            cc.p(0, 0)
+        ];
+
+        this.sprite.runAction(
+            cc.CardinalSplineBy.create(animationDuration/8, array, 1.1).repeat(8)
+        );
+
+        var emitter = cc.ParticleFire.create();;
+        this.emitters.push(emitter);
+        this.addChild(emitter, 5);
+        emitter.texture = cc.textureCache.addImage(res.fire_png);
+
+        emitter.attr({
+            scaleX: this.scaleRatioX(),
+            scaleY: this.scaleRatioY()/1.5,
+            x: this.px(),
+            y: this.py()+200*this.scaleRatioY()
+        });
+
+        AudioPlayer.playTantrumEffect();
+        this.resetStyle(animationDuration);
+    },
+
+    actionLove: function() {
+        cc.log("love");
+        var animationDuration = 4;
+
+        AudioPlayer.playLoveEffect();
+        this.resetStyle(animationDuration);
+    },
+
+    actionSleep: function() {
+        cc.log("sleeping");
+        var animationDuration = 4;
+
+        AudioPlayer.playSleepEffect();
+        this.resetStyle(animationDuration);
+    },
+
+    actionDressUp: function() {
+        cc.log("dress up");
+        var animationDuration = 4;
+
+        AudioPlayer.playDressUpEffect();
+        this.resetStyle(animationDuration);
     },
 
     changeBg: function () {
