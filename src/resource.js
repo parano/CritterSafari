@@ -7,9 +7,17 @@ var res = {
     effect_test_mp3     : "res/Sound/effect_test.mp3",
     music_test_mp3      : "res/Sound/music_test.mp3",
 
+    dancing_mp3         : "res/Sound/music_test.mp3",
+    sleeping_mp3        : "res/Sound/music_test.mp3",
+    magic_mp3           : "res/Sound/music_test.mp3",
+    dressup_mp3         : "res/Sound/music_test.mp3",
+    love_mp3            : "res/Sound/music_test.mp3",
+    tantrum_mp3         : "res/Sound/music_test.mp3",
+
     phoenix_plist       : "res/Particles/Phoenix.plist",
     fire_png            : "res/Particles/fire.png",
-    love_png            : "res/Particles/love.png"
+    love_png            : "res/Particles/love.png",
+    sleeping_plist      : "res/Particles/sleeping.plist"
 };
 
 var g_resources = [
@@ -23,12 +31,18 @@ var g_resources = [
     //plist
     res.princess_plist,
     res.phoenix_plist,
+    res.sleeping_plist,
 
     //Audios
     res.effect_test_mp3,
-    res.music_test_mp3
+    res.music_test_mp3,
 
-
+    res.dancing_mp3,
+    res.sleeping_mp3,
+    res.magic_mp3,
+    res.dressup_mp3,
+    res.love_mp3,
+    res.tantrum_mp3
     //fnt
 
     //tmx

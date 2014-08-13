@@ -12,32 +12,44 @@ var AudioPlayer = {
         this.audioEngine.setMusicVolume(0.5);
     },
 
-    playDancingEffect: function(){
+    stopMusicAfter: function(delay) {
+        var that = this;
+        setTimeout(function() {
+            cc.log("stop!");
+            that.audioEngine.stopMusic();
+        }, delay * 1000);
+    },
+
+    playDancingEffect: function(delay){
         //cc.log("dancing sound effect playing...");
-        this.audioEngine.playMusic(res.effect_test_mp3, false);
+        this.audioEngine.playMusic(res.dancing_mp3, false);
+        this.stopMusicAfter(delay);
     },
 
-    playMagicEffect: function(){
-        this.audioEngine.playMusic(res.effect_test_mp3, false);
+    playMagicEffect: function(delay){
+        this.audioEngine.playMusic(res.magic_mp3, false);
+        this.stopMusicAfter(delay);
     },
 
-    playTantrumEffect: function(){
-        this.audioEngine.playMusic(res.effect_test_mp3, false);
+    playTantrumEffect: function(delay){
+        this.audioEngine.playMusic(res.tantrum_mp3, false);
+        this.stopMusicAfter(delay);
     },
 
-    playLoveEffect: function(){
-        this.audioEngine.playMusic(res.effect_test_mp3, false);
+    playLoveEffect: function(delay){
+        this.audioEngine.playMusic(res.love_mp3, false);
+        this.stopMusicAfter(delay);
     },
 
-    playSleepEffect: function(){
-        this.audioEngine.playMusic(res.effect_test_mp3, false);
+    playSleepEffect: function(delay){
+        this.audioEngine.playMusic(res.sleeping_mp3, false);
+        this.stopMusicAfter(delay);
     },
 
-    playDressUpEffect: function(){
-        this.audioEngine.playMusic(res.effect_test_mp3, false);
+    playDressUpEffect: function(delay){
+        this.audioEngine.playMusic(res.dressup_mp3, false);
+        this.stopMusicAfter(delay);
     }
-
-
 
 };
 

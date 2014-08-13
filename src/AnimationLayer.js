@@ -256,7 +256,7 @@ var AnimationLayer = cc.Layer.extend({
             //)
         );
 
-        AudioPlayer.playDancingEffect();
+        AudioPlayer.playDancingEffect(animationDuration - 0.2);
         this.resetStyle(animationDuration);
     },
 
@@ -297,7 +297,7 @@ var AnimationLayer = cc.Layer.extend({
             }
         });
 
-        AudioPlayer.playMagicEffect();
+        AudioPlayer.playMagicEffect(animationDuration - 0.2);
         this.resetStyle(animationDuration);
     },
 
@@ -334,7 +334,7 @@ var AnimationLayer = cc.Layer.extend({
             y: this.py()+200*this.scaleRatioY()
         });
 
-        AudioPlayer.playTantrumEffect();
+        AudioPlayer.playTantrumEffect(animationDuration - 0.2);
         this.resetStyle(animationDuration);
     },
 
@@ -415,21 +415,30 @@ var AnimationLayer = cc.Layer.extend({
             y: this.py()
         });
 
-        AudioPlayer.playLoveEffect();
+        AudioPlayer.playLoveEffect(animationDuration - 0.2);
         this.resetStyle(animationDuration);
     },
 
     actionSleep: function() {
         cc.log("sleeping");
-        var animationDuration = 4;
+        var animationDuration = 5;
 
         this.sprite.stopAllActions();
         this.sprite.setSpriteFrame(
             cc.spriteFrameCache.getSpriteFrame("pink_front_3.png"));
 
+        var emitter = cc.ParticleSystem.create(res.sleeping_plist);
+        this.emitters.push(emitter);
+        this.addChild(emitter, 10);
 
+        emitter.attr({
+            scaleX: this.scaleRatioX()*2,
+            scaleY: this.scaleRatioY()*2,
+            x: this.px(),
+            y: this.py()
+        });
 
-        AudioPlayer.playSleepEffect();
+        AudioPlayer.playSleepEffect(animationDuration - 0.2);
         this.resetStyle(animationDuration);
     },
 
@@ -437,7 +446,7 @@ var AnimationLayer = cc.Layer.extend({
         cc.log("dress up");
         var animationDuration = 4;
 
-        AudioPlayer.playDressUpEffect();
+        AudioPlayer.playDressUpEffect(animationDuration - 0.2);
         this.resetStyle(animationDuration);
     },
 
