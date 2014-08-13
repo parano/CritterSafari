@@ -5,14 +5,14 @@ var res = {
     princess_plist      : "res/princess.plist",
 
     effect_test_mp3     : "res/Sound/effect_test.mp3",
-    music_test_mp3      : "res/Sound/music_test.mp3",
+    music_test_mp3      : "res/Sound/character_dancing.mp3",
 
-    dancing_mp3         : "res/Sound/music_test.mp3",
-    sleeping_mp3        : "res/Sound/music_test.mp3",
-    magic_mp3           : "res/Sound/music_test.mp3",
-    dressup_mp3         : "res/Sound/music_test.mp3",
-    love_mp3            : "res/Sound/music_test.mp3",
-    tantrum_mp3         : "res/Sound/music_test.mp3",
+    dancing_mp3         : "res/Sound/character_dancing.mp3",
+    sleeping_mp3        : "res/Sound/character_sleep.mp3",
+    magic_mp3           : "res/Sound/character_magic.mp3",
+    dressup_mp3         : "res/Sound/character_dressup.mp3",
+    love_mp3            : "res/Sound/character_love.mp3",
+    tantrum_mp3         : "res/Sound/character_dancing.mp3",
 
     phoenix_plist       : "res/Particles/Phoenix.plist",
     fire_png            : "res/Particles/fire.png",

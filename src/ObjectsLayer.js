@@ -159,34 +159,46 @@ var ObjectsLayer = cc.Layer.extend({
             event: cc.EventListener.CUSTOM,
             eventName: "action",
             callback: function(event){
-                //event.getUserData().row
-                //event.getUserData().col
+                var object_row, object_col;
+                var event_row = event.getUserData().row;
+                var event_col = event.getUserData().col;
                 var action = event.getUserData().action;
-                switch(action)  {
-                    case 'dancing':
-                        cc.log("dacing event received");
-                        cc.log(event.getUserData());
-                        that.dancingAction(0);
-                        break;
-                    case 'sleeping':
-                        that.sleepingAction(0);
-                        break;
-                    case 'dressup':
-                        that.dressupAction(0);
-                        break;
-                    case 'magic':
-                        that.magicAction(0);
-                        break;
-                    case 'love':
-                        that.loveAction(0);
-                        break;
-                    case 'tantrum':
-                        that.tantrumAction(0);
-                        break;
+
+                for(var i=0; i<4; i++) {
+                    object_row = Constants.objects_initial_location[i].row;
+                    object_col = Constants.objects_initial_location[i].col;
+                    if(that.nearby(event_row, event_col, object_row, object_col)){
+                        switch(action)  {
+                            case 'dancing':
+                                that.dancingAction(i);
+                                break;
+                            case 'sleeping':
+                                that.sleepingAction(i);
+                                break;
+                            case 'dressup':
+                                that.dressupAction(i);
+                                break;
+                            case 'magic':
+                                that.magicAction(i);
+                                break;
+                            case 'love':
+                                that.loveAction(i);
+                                break;
+                            case 'tantrum':
+                                that.tantrumAction(i);
+                                break;
+                        }
+                    }
                 }
+
+
             }
         });
         cc.eventManager.addListener(this.actionListener, 1);
+    },
+
+    nearby: function(x1, y1, x2, y2){
+        return (x1-x2)*(x1-x2) + (y1-y2)*(y1-y2) < 2;
     },
 
     dancingAction: function(index) {
@@ -202,7 +214,7 @@ var ObjectsLayer = cc.Layer.extend({
             cc.Animate.create(
                 cc.Animation.create(this.dancingFrames[index], 1/fps)
             ).repeat(
-                Math.floor(duration*fps/Constants.dancingFramesLen[index] + 1)
+                Math.floor(duration*fps/Constants.dancingFramesLen[index])
             )
         );
     },
