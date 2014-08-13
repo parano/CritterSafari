@@ -10,6 +10,7 @@ var AnimationLayer = cc.Layer.extend({
     row: 4,
     col: 0,
     tileMatrix: null,
+    animation: null,
 
     ctor: function () {
         this._super();
@@ -102,15 +103,18 @@ var AnimationLayer = cc.Layer.extend({
             animationFrames.push(frame);
         }
 
-        var animation = cc.Animation.create(animationFrames, 0.3);
-        this.runningAction = cc.RepeatForever.create(cc.Animate.create(animation));
+        this.animation = cc.Animation.create(animationFrames, 0.3);
+        this.runningAction = cc.RepeatForever.create(cc.Animate.create(this.animation));
         this.sprite = cc.Sprite.create("#pink_front_1.png");
         this.sprite.attr({
+            //scaleX: this.scaleRatioX(),
+            //scaleY: this.scaleRatioY(),
             x: this.px(),
-            y: this.py(),
-            scaleX: this.scaleRatioX(),
-            scaleY: this.scaleRatioY()
+            y: this.py()
         });
+        this.sprite.setScaleY(this.scaleRatioY());
+        this.sprite.setScaleX(this.scaleRatioX());
+
         this.sprite.runAction(this.runningAction);
         this.spriteSheet.addChild(this.sprite);
     },
@@ -118,6 +122,7 @@ var AnimationLayer = cc.Layer.extend({
     init: function () {
         this._super();
         this.s = cc.director.getWinSize();
+        //cc.director.setContentScaleFactor(Constants.bg.width * 1.5 / this.s.width);
 
         if(Config.ls.getItem('bg') === 'space') {
             this.tileMatrix = Constants.space_matrix;
@@ -147,11 +152,33 @@ var AnimationLayer = cc.Layer.extend({
 
     updatePosition: function(duration) {
         this.sprite.stopAllActions();
+        this.sprite.attr({
+            rotation: 0
+        });
         this.sprite.runAction(this.runningAction);
         this.sprite.runAction(cc.MoveTo.create(
             duration,
             cc.p(this.px(),this.py())
         ).easing(cc.easeInOut(2)));
+    },
+
+    resetStyle: function(delay) {
+        var that = this;
+
+        this.sprite.runAction(
+            cc.Sequence.create(
+                cc.DelayTime.create(delay),
+                cc.CallFunc.create(function() {
+                    that.sprite.stopAllActions();
+                    that.sprite.attr({
+                        rotation: 0,
+                        x: that.px(),
+                        y: that.py()//,
+                    });
+                    that.sprite.runAction(that.runningAction);
+                })
+            )
+        );
     },
 
     resetPrincess: function() {
@@ -190,14 +217,36 @@ var AnimationLayer = cc.Layer.extend({
         this.updatePosition(1);
     },
 
-    actionDancing: function() {
-        cc.log("Dancing Playing");
+    actionDancing: function (Sequence) {
+        cc.log("Dancing Playing!!!");
+
+        //blink
+        //var blinkAction = cc.Blink.create(4,20);
+
+        //rotate
+        //var rotateAction = cc.Sequence.create(
+        //    cc.RotateTo.create(0.5, -90),
+        //    cc.RotateTo.create(0.5, 90)
+        //);
+
+        var cx = this.px(),
+            cy = this.py();
+        var jumpByRight = cc.JumpBy.create(1, cc.p(50, 0),30, 2);
+        var jumpByLeft = cc.JumpBy.create(1, cc.p(-50, 0), 30, 2);
+
+        var jumpAction = cc.Sequence.create(
+            jumpByRight, jumpByLeft, jumpByLeft, jumpByRight);
 
         this.sprite.stopAllActions();
-        this.sprite.runAction();
+        this.sprite.runAction(
+            cc.Spawn.create(
+                cc.Repeat.create(cc.Animate.create(this.animation),10),
+                jumpAction
+            )
+        );
 
         AudioPlayer.playDancingEffect();
-        this.updatePosition(0.1);
+        this.resetStyle(4);
     },
 
     actionSleep: function() {
@@ -230,7 +279,7 @@ var AnimationLayer = cc.Layer.extend({
         }
         cc.game.run();
     },
-    
+
     changePrincess: function (princess) {
         Config.ls.setItem('princess', princess);
         cc.game.run();
