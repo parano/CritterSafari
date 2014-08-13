@@ -18,6 +18,11 @@ var res = {
     fire_png            : "res/Particles/fire.png",
     love_png            : "res/Particles/love.png",
     sleeping_plist      : "res/Particles/sleeping.plist",
+    fox_sprite_png      : "res/fox.png",
+    pig_sprite_png      : "res/pig.png",
+    monkey_sprite_png   : "res/monkey.png",
+    rabbit_sprite_png   : "res/rabbit.png",
+
 
     //objects
     fox_plist           : "res/Objects/fox.plist",

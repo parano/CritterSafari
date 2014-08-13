@@ -1,19 +1,21 @@
 /**
  * Created by Chaoyu Yang on 8/13/14.
  */
-var AnimationLayer = cc.Layer.extend({
+var ObjectsLayer = cc.Layer.extend({
     s: null,
     object_names: ['fox', 'monkey', 'pig', 'rabbit'],
     object_prefix: ['F', 'M', 'P', 'R'],
     sprites: [],
     sprites_frames: [res.fox_plist, res.monkey_plist, res.pig_plist, res.rabbit_plist],
     sprites_images: [res.fox_png, res.monkey_png, res.pig_png, res.rabbit_png],
+    sprites_default_images: [res.fox_sprite_png, res.monkey_sprite_png, res.pig_sprite_png, res.rabbit_sprite_png],
     dancingFrames: [[],[],[],[]],
     magicFrames: [[],[],[],[]],
     loveFrames: [[],[],[],[]],
     tantrumFrames: [[],[],[],[]],
     dressupFrames: [[],[],[],[]],
     sleepingFrames: [[],[],[],[]],
+    tileMatrix: null,
 
 //    foxSprite: null,
 //    monkeySprite: null,
@@ -26,8 +28,21 @@ var AnimationLayer = cc.Layer.extend({
     },
 
     initSprites: function(index) {
-        var frame;
-        var str;
+        this.sprites[index] = cc.Sprite.create(this.sprites_default_images[index]);
+        this.addChild(this.sprites[index], index);
+        var row = Constants.objects_initial_location[index].row;
+        var col = Constants.objects_initial_location[index].col;
+        this.sprites[index].attr({
+            scaleX: this.scaleRatioX(),
+            scaleY: this.scaleRatioY(),
+            x: this.px(row, col),
+            y: this.py(row, col)
+        });
+    },
+
+
+    initAnimations: function(index) {
+        var frame,str;
         cc.spriteFrameCache.addSpriteFrames(this.sprites_frames[index]);
         var spriteSheet = cc.SpriteBatchNode.create(this.sprites_images[index]);
         this.addChild(spriteSheet);
@@ -69,15 +84,17 @@ var AnimationLayer = cc.Layer.extend({
         }
     },
 
-
-    initAnimations: function(index) {
-
-    },
-
     init: function() {
         this._super();
 
         this.s = cc.director.getWinSize();
+
+        if(Config.ls.getItem('bg') === 'space') {
+            this.tileMatrix = Constants.space_matrix;
+        } else {
+            this.tileMatrix = Constants.forest_matrix;
+        }
+
         for(var i= 0; i<4; i++) {
             this.initSprites(i);
             this.initAnimations(i);
@@ -109,5 +126,21 @@ var AnimationLayer = cc.Layer.extend({
                 }
             }, this);
         }
+    },
+
+    px: function(row, col) {
+        return this.tileMatrix[row][col].x * this.scaleRatioX();
+    },
+
+    py: function(row, col) {
+        return this.tileMatrix[row][col].y * this.scaleRatioY();
+    },
+
+    scaleRatioX: function() {
+        return this.s.width  / Constants.bg.width;
+    },
+
+    scaleRatioY: function() {
+        return this.s.height / Constants.bg.height;
     }
 });

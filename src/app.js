@@ -9,6 +9,7 @@ var GameScene = cc.Scene.extend({
         this.addChild(new AnimationLayer(1, 4, 0)); // character id, starting row, starting col
         this.addChild(new AnimationLayer(2, 0, 4)); // second player
         this.addChild(new StatusLayer());
+        this.addChild(new ObjectsLayer());
     }
 });
 

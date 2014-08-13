@@ -26,7 +26,12 @@ var Constants = {
     loveFramesLen: [16, 13, 20, 16],
     magicFramesLen: [32, 9, 5, 61],
     sleepFramesLen: [5, 20, 45, 18],
-    tantrumFramesLen: [16, 4, 22, 19]
+    tantrumFramesLen: [16, 4, 22, 19],
+
+    objects_initial_location: [
+        {row:0, col:0}, {row:4, col:4},
+        {row:2, col:1}, {row:2, col:3}
+    ]
 };
 
 var Config = {
