@@ -241,8 +241,9 @@ var AnimationLayer = cc.Layer.extend({
         //);
 
         var animationDuration = 4;
-        var jumpByRight = cc.JumpBy.create(1, cc.p(50, 0),30, 2);
-        var jumpByLeft = cc.JumpBy.create(1, cc.p(-50, 0), 30, 2);
+        var distance = 80 * this.scaleRatioX();
+        var jumpByRight = cc.JumpBy.create(1, cc.p(distance, 0), 0.6*distance, 2);
+        var jumpByLeft = cc.JumpBy.create(1, cc.p(-distance, 0), 0.6*distance, 2);
 
         var jumpAction = cc.Sequence.create(
             jumpByRight, jumpByLeft, jumpByLeft, jumpByRight);
@@ -264,13 +265,13 @@ var AnimationLayer = cc.Layer.extend({
         cc.log("magic");
 
         var animationDuration = 4;
-        var distance = 25;
+        var distance = 50*this.scaleRatioX();
         var array = [
             cc.p(0, 0),
-            cc.p(-1.5*distance, distance),
-            cc.p(-1.5*distance, -distance),
-            cc.p(1.5*distance, distance),
-            cc.p(1.5*distance, -distance),
+            cc.p(-2*distance, distance),
+            cc.p(-2*distance, -distance),
+            cc.p(2*distance, distance),
+            cc.p(2*distance, -distance),
             cc.p(0, 0)
         ];
 
@@ -302,6 +303,10 @@ var AnimationLayer = cc.Layer.extend({
 
     actionTantrum: function() {
         cc.log("Tantrum");
+
+        this.sprite.stopAllActions();
+        this.sprite.setSpriteFrame(
+            cc.spriteFrameCache.getSpriteFrame("pink_tantrum.png"));
 
         var animationDuration = 4;
         var distance = 13;
@@ -337,6 +342,79 @@ var AnimationLayer = cc.Layer.extend({
         cc.log("love");
         var animationDuration = 4;
 
+        var emitter = cc.ParticleSystem.create();
+        this.emitters.push(emitter);
+        this.addChild(emitter, 10);
+        emitter.texture = cc.textureCache.addImage(res.love_png);
+
+        emitter.duration = -1;
+
+        // gravity
+        emitter.gravity = cc.p(0, 0);
+
+        // angle
+        emitter.angle = 90;
+        emitter.angleVar = 360;
+
+        // speed of particles
+        emitter.speed = 160;
+        emitter.speedVar = 20;
+
+        // radial
+        emitter.radialAccel = -120;
+        emitter.radialAccelVar = 0;
+
+        // tagential
+        emitter.tangentialAccel = 30;
+        emitter.tangentialAccelVar = 0;
+
+        // emitter position
+        emitter.x = 160;
+        emitter.y = 240;
+        emitter.posVar = cc.p(0, 0);
+
+        // life of particles
+        emitter.life = 4;
+        emitter.lifeVar = 1;
+
+        // spin of particles
+        emitter.startSpin = 0;
+        emitter.startSizeVar = 0;
+        emitter.endSpin = 0;
+        emitter.endSpinVar = 0;
+
+        // color of particles
+        var startColor = cc.color(128, 128, 128, 255);
+        emitter.startColor = startColor;
+
+        var startColorVar = cc.color(128, 128, 128, 255);
+        emitter.startColorVar = startColorVar;
+
+        var endColor = cc.color(26, 26, 26, 50);
+        emitter.endColor = endColor;
+
+        var endColorVar = cc.color(26, 26, 26, 50);
+        emitter.endColorVar = endColorVar;
+
+        // size, in pixels
+        emitter.startSize = 80.0 * this.scaleRatioX();
+        emitter.startSizeVar = 40.0 * this.scaleRatioX();
+        emitter.endSize = cc.ParticleSystem.START_SIZE_EQUAL_TO_END_SIZE;
+
+        // emits per second
+
+        emitter.emissionRate = emitter.totalParticles / emitter.life;
+
+        // additive
+        emitter.setBlendAdditive(true);
+
+        emitter.attr({
+            scaleX: this.scaleRatioX()*2,
+            scaleY: this.scaleRatioY()*2,
+            x: this.px(),
+            y: this.py()
+        });
+
         AudioPlayer.playLoveEffect();
         this.resetStyle(animationDuration);
     },
@@ -344,6 +422,12 @@ var AnimationLayer = cc.Layer.extend({
     actionSleep: function() {
         cc.log("sleeping");
         var animationDuration = 4;
+
+        this.sprite.stopAllActions();
+        this.sprite.setSpriteFrame(
+            cc.spriteFrameCache.getSpriteFrame("pink_front_3.png"));
+
+
 
         AudioPlayer.playSleepEffect();
         this.resetStyle(animationDuration);
