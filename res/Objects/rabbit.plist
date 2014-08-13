@@ -7,7 +7,7 @@
             <key>R_Dance-1 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1118,50},{30,46}}</string>
+                <string>{{190,40},{30,46}}</string>
                 <key>offset</key>
                 <string>{-12,-2}</string>
                 <key>rotated</key>
@@ -20,7 +20,7 @@
             <key>R_Dance-10 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1142,2},{30,46}}</string>
+                <string>{{64,146},{30,46}}</string>
                 <key>offset</key>
                 <string>{-12,-2}</string>
                 <key>rotated</key>
@@ -33,7 +33,7 @@
             <key>R_Dance-11 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{542,102},{32,46}}</string>
+                <string>{{1054,94},{32,46}}</string>
                 <key>offset</key>
                 <string>{-12,-2}</string>
                 <key>rotated</key>
@@ -46,7 +46,7 @@
             <key>R_Dance-12 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{582,52},{42,46}}</string>
+                <string>{{828,54},{42,46}}</string>
                 <key>offset</key>
                 <string>{-13,-2}</string>
                 <key>rotated</key>
@@ -59,7 +59,7 @@
             <key>R_Dance-13 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{608,2},{42,46}}</string>
+                <string>{{872,54},{42,46}}</string>
                 <key>offset</key>
                 <string>{-13,-2}</string>
                 <key>rotated</key>
@@ -72,7 +72,7 @@
             <key>R_Dance-14 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{626,50},{42,46}}</string>
+                <string>{{916,54},{42,46}}</string>
                 <key>offset</key>
                 <string>{-13,-2}</string>
                 <key>rotated</key>
@@ -85,11 +85,11 @@
             <key>R_Dance-15 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{712,50},{38,46}}</string>
+                <string>{{1204,54},{38,46}}</string>
                 <key>offset</key>
                 <string>{-13,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{3,4},{38,46}}</string>
                 <key>sourceSize</key>
@@ -98,11 +98,11 @@
             <key>R_Dance-16 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{738,2},{38,46}}</string>
+                <string>{{1252,54},{38,46}}</string>
                 <key>offset</key>
                 <string>{-13,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{3,4},{38,46}}</string>
                 <key>sourceSize</key>
@@ -111,11 +111,11 @@
             <key>R_Dance-17 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{752,50},{38,46}}</string>
+                <string>{{1102,94},{38,46}}</string>
                 <key>offset</key>
                 <string>{-13,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{3,4},{38,46}}</string>
                 <key>sourceSize</key>
@@ -124,11 +124,11 @@
             <key>R_Dance-18 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1668,94},{38,42}}</string>
+                <string>{{68,194},{38,42}}</string>
                 <key>offset</key>
                 <string>{-9,-4}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{7,8},{38,42}}</string>
                 <key>sourceSize</key>
@@ -137,7 +137,7 @@
             <key>R_Dance-19 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1596,94},{40,38}}</string>
+                <string>{{318,134},{40,38}}</string>
                 <key>offset</key>
                 <string>{-5,-6}</string>
                 <key>rotated</key>
@@ -150,7 +150,7 @@
             <key>R_Dance-2 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1150,50},{30,46}}</string>
+                <string>{{108,192},{30,46}}</string>
                 <key>offset</key>
                 <string>{-12,-2}</string>
                 <key>rotated</key>
@@ -163,7 +163,7 @@
             <key>R_Dance-20 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{824,98},{42,36}}</string>
+                <string>{{182,88},{42,36}}</string>
                 <key>offset</key>
                 <string>{0,-7}</string>
                 <key>rotated</key>
@@ -176,7 +176,7 @@
             <key>R_Dance-21 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1556,94},{38,40}}</string>
+                <string>{{802,104},{38,40}}</string>
                 <key>offset</key>
                 <string>{3,-5}</string>
                 <key>rotated</key>
@@ -189,7 +189,7 @@
             <key>R_Dance-22 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{868,98},{36,42}}</string>
+                <string>{{800,146},{36,42}}</string>
                 <key>offset</key>
                 <string>{7,-4}</string>
                 <key>rotated</key>
@@ -202,11 +202,11 @@
             <key>R_Dance-23 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{732,98},{36,44}}</string>
+                <string>{{132,146},{36,44}}</string>
                 <key>offset</key>
                 <string>{9,-3}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{26,6},{36,44}}</string>
                 <key>sourceSize</key>
@@ -215,11 +215,11 @@
             <key>R_Dance-24 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{778,2},{38,46}}</string>
+                <string>{{1150,94},{38,46}}</string>
                 <key>offset</key>
                 <string>{10,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{26,4},{38,46}}</string>
                 <key>sourceSize</key>
@@ -228,11 +228,11 @@
             <key>R_Dance-25 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{792,50},{38,46}}</string>
+                <string>{{1198,94},{38,46}}</string>
                 <key>offset</key>
                 <string>{12,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{28,4},{38,46}}</string>
                 <key>sourceSize</key>
@@ -241,11 +241,11 @@
             <key>R_Dance-26 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{494,2},{38,48}}</string>
+                <string>{{1004,54},{38,48}}</string>
                 <key>offset</key>
                 <string>{12,-1}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{28,2},{38,48}}</string>
                 <key>sourceSize</key>
@@ -254,11 +254,11 @@
             <key>R_Dance-27 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{502,52},{38,48}}</string>
+                <string>{{1054,54},{38,48}}</string>
                 <key>offset</key>
                 <string>{12,-1}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{28,2},{38,48}}</string>
                 <key>sourceSize</key>
@@ -267,11 +267,11 @@
             <key>R_Dance-28 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{818,2},{38,46}}</string>
+                <string>{{1246,94},{38,46}}</string>
                 <key>offset</key>
                 <string>{12,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{28,4},{38,46}}</string>
                 <key>sourceSize</key>
@@ -280,11 +280,11 @@
             <key>R_Dance-29 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1302,2},{40,44}}</string>
+                <string>{{756,104},{40,44}}</string>
                 <key>offset</key>
                 <string>{8,-3}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{23,6},{40,44}}</string>
                 <key>sourceSize</key>
@@ -293,11 +293,11 @@
             <key>R_Dance-3 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{590,100},{34,46}}</string>
+                <string>{{96,144},{34,46}}</string>
                 <key>offset</key>
                 <string>{-12,-2}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{6,4},{34,46}}</string>
                 <key>sourceSize</key>
@@ -306,7 +306,7 @@
             <key>R_Dance-30 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1338,94},{42,40}}</string>
+                <string>{{216,192},{42,40}}</string>
                 <key>offset</key>
                 <string>{4,-5}</string>
                 <key>rotated</key>
@@ -319,7 +319,7 @@
             <key>R_Dance-31 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{686,98},{44,36}}</string>
+                <string>{{272,126},{44,36}}</string>
                 <key>offset</key>
                 <string>{-2,-7}</string>
                 <key>rotated</key>
@@ -332,7 +332,7 @@
             <key>R_Dance-32 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1514,94},{40,40}}</string>
+                <string>{{844,144},{40,40}}</string>
                 <key>offset</key>
                 <string>{-4,-5}</string>
                 <key>rotated</key>
@@ -345,11 +345,11 @@
             <key>R_Dance-33 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1712,94},{38,42}}</string>
+                <string>{{476,94},{38,42}}</string>
                 <key>offset</key>
                 <string>{-8,-4}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{8,8},{38,42}}</string>
                 <key>sourceSize</key>
@@ -358,11 +358,11 @@
             <key>R_Dance-34 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1352,48},{38,44}}</string>
+                <string>{{936,102},{38,44}}</string>
                 <key>offset</key>
                 <string>{-10,-3}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{6,6},{38,44}}</string>
                 <key>sourceSize</key>
@@ -371,11 +371,11 @@
             <key>R_Dance-35 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{832,50},{38,46}}</string>
+                <string>{{516,88},{38,46}}</string>
                 <key>offset</key>
                 <string>{-11,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{5,4},{38,46}}</string>
                 <key>sourceSize</key>
@@ -384,11 +384,11 @@
             <key>R_Dance-36 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{534,2},{38,48}}</string>
+                <string>{{1104,54},{38,48}}</string>
                 <key>offset</key>
                 <string>{-14,-1}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{2,2},{38,48}}</string>
                 <key>sourceSize</key>
@@ -397,11 +397,11 @@
             <key>R_Dance-37 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{542,52},{38,48}}</string>
+                <string>{{1154,54},{38,48}}</string>
                 <key>offset</key>
                 <string>{-14,-1}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{2,2},{38,48}}</string>
                 <key>sourceSize</key>
@@ -410,7 +410,7 @@
             <key>R_Dance-4 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{652,2},{42,46}}</string>
+                <string>{{960,54},{42,46}}</string>
                 <key>offset</key>
                 <string>{-14,-2}</string>
                 <key>rotated</key>
@@ -423,11 +423,11 @@
             <key>R_Dance-5 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{858,2},{38,46}}</string>
+                <string>{{564,102},{38,46}}</string>
                 <key>offset</key>
                 <string>{-14,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{2,4},{38,46}}</string>
                 <key>sourceSize</key>
@@ -436,11 +436,11 @@
             <key>R_Dance-6 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1174,2},{30,46}}</string>
+                <string>{{1004,128},{30,46}}</string>
                 <key>offset</key>
                 <string>{-12,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{8,4},{30,46}}</string>
                 <key>sourceSize</key>
@@ -449,11 +449,11 @@
             <key>R_Dance-7 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1182,50},{30,46}}</string>
+                <string>{{1052,128},{30,46}}</string>
                 <key>offset</key>
                 <string>{-12,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{8,4},{30,46}}</string>
                 <key>sourceSize</key>
@@ -462,11 +462,11 @@
             <key>R_Dance-8 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1206,2},{30,46}}</string>
+                <string>{{1100,134},{30,46}}</string>
                 <key>offset</key>
                 <string>{-12,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{8,4},{30,46}}</string>
                 <key>sourceSize</key>
@@ -475,11 +475,11 @@
             <key>R_Dance-9 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1214,50},{30,46}}</string>
+                <string>{{1148,134},{30,46}}</string>
                 <key>offset</key>
                 <string>{-12,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{8,4},{30,46}}</string>
                 <key>sourceSize</key>
@@ -488,11 +488,11 @@
             <key>R_DressUp-1 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1426,2},{32,44}}</string>
+                <string>{{754,146},{32,44}}</string>
                 <key>offset</key>
                 <string>{-7,-3}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{2,6},{32,44}}</string>
                 <key>sourceSize</key>
@@ -501,11 +501,11 @@
             <key>R_DressUp-10 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{938,2},{32,46}}</string>
+                <string>{{1196,134},{32,46}}</string>
                 <key>offset</key>
                 <string>{-7,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{2,4},{32,46}}</string>
                 <key>sourceSize</key>
@@ -514,11 +514,11 @@
             <key>R_DressUp-11 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{912,50},{34,46}}</string>
+                <string>{{1244,134},{34,46}}</string>
                 <key>offset</key>
                 <string>{-8,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{0,4},{34,46}}</string>
                 <key>sourceSize</key>
@@ -527,7 +527,7 @@
             <key>R_DressUp-12 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1030,98},{34,44}}</string>
+                <string>{{392,138},{34,44}}</string>
                 <key>offset</key>
                 <string>{-8,-3}</string>
                 <key>rotated</key>
@@ -540,11 +540,11 @@
             <key>R_DressUp-13 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1432,48},{32,44}}</string>
+                <string>{{564,176},{32,44}}</string>
                 <key>offset</key>
                 <string>{-7,-3}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{2,6},{32,44}}</string>
                 <key>sourceSize</key>
@@ -553,11 +553,11 @@
             <key>R_DressUp-14 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1460,2},{32,44}}</string>
+                <string>{{610,176},{32,44}}</string>
                 <key>offset</key>
                 <string>{-7,-3}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{2,6},{32,44}}</string>
                 <key>sourceSize</key>
@@ -566,11 +566,11 @@
             <key>R_DressUp-15 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1426,2},{32,44}}</string>
+                <string>{{754,146},{32,44}}</string>
                 <key>offset</key>
                 <string>{-7,-3}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{2,6},{32,44}}</string>
                 <key>sourceSize</key>
@@ -579,11 +579,11 @@
             <key>R_DressUp-16 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1466,48},{32,44}}</string>
+                <string>{{656,180},{32,44}}</string>
                 <key>offset</key>
                 <string>{-7,-3}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{2,6},{32,44}}</string>
                 <key>sourceSize</key>
@@ -592,7 +592,7 @@
             <key>R_DressUp-17 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1076,98},{34,44}}</string>
+                <string>{{438,138},{34,44}}</string>
                 <key>offset</key>
                 <string>{-5,-3}</string>
                 <key>rotated</key>
@@ -605,11 +605,11 @@
             <key>R_DressUp-18 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{872,50},{38,46}}</string>
+                <string>{{612,102},{38,46}}</string>
                 <key>offset</key>
                 <string>{-4,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{2,4},{38,46}}</string>
                 <key>sourceSize</key>
@@ -618,11 +618,11 @@
             <key>R_DressUp-19 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{670,50},{40,46}}</string>
+                <string>{{660,104},{40,46}}</string>
                 <key>offset</key>
                 <string>{-3,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{2,4},{40,46}}</string>
                 <key>sourceSize</key>
@@ -631,11 +631,11 @@
             <key>R_DressUp-2 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1466,48},{32,44}}</string>
+                <string>{{656,180},{32,44}}</string>
                 <key>offset</key>
                 <string>{-7,-3}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{2,6},{32,44}}</string>
                 <key>sourceSize</key>
@@ -644,11 +644,11 @@
             <key>R_DressUp-20 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{696,2},{40,46}}</string>
+                <string>{{708,104},{40,46}}</string>
                 <key>offset</key>
                 <string>{-3,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{2,4},{40,46}}</string>
                 <key>sourceSize</key>
@@ -657,11 +657,11 @@
             <key>R_DressUp-21 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1494,2},{32,44}}</string>
+                <string>{{702,180},{32,44}}</string>
                 <key>offset</key>
                 <string>{-7,-3}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{2,6},{32,44}}</string>
                 <key>sourceSize</key>
@@ -670,11 +670,11 @@
             <key>R_DressUp-22 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1500,48},{32,44}}</string>
+                <string>{{748,180},{32,44}}</string>
                 <key>offset</key>
                 <string>{-7,-3}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{2,6},{32,44}}</string>
                 <key>sourceSize</key>
@@ -683,7 +683,7 @@
             <key>R_DressUp-23 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{948,50},{32,46}}</string>
+                <string>{{140,192},{32,46}}</string>
                 <key>offset</key>
                 <string>{-7,-2}</string>
                 <key>rotated</key>
@@ -696,11 +696,11 @@
             <key>R_DressUp-24 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{938,2},{32,46}}</string>
+                <string>{{1196,134},{32,46}}</string>
                 <key>offset</key>
                 <string>{-7,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{2,4},{32,46}}</string>
                 <key>sourceSize</key>
@@ -709,11 +709,11 @@
             <key>R_DressUp-25 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{912,50},{34,46}}</string>
+                <string>{{1244,134},{34,46}}</string>
                 <key>offset</key>
                 <string>{-8,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{0,4},{34,46}}</string>
                 <key>sourceSize</key>
@@ -722,7 +722,7 @@
             <key>R_DressUp-26 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1030,98},{34,44}}</string>
+                <string>{{392,138},{34,44}}</string>
                 <key>offset</key>
                 <string>{-8,-3}</string>
                 <key>rotated</key>
@@ -735,11 +735,11 @@
             <key>R_DressUp-27 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1432,48},{32,44}}</string>
+                <string>{{564,176},{32,44}}</string>
                 <key>offset</key>
                 <string>{-7,-3}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{2,6},{32,44}}</string>
                 <key>sourceSize</key>
@@ -748,11 +748,11 @@
             <key>R_DressUp-28 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1460,2},{32,44}}</string>
+                <string>{{610,176},{32,44}}</string>
                 <key>offset</key>
                 <string>{-7,-3}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{2,6},{32,44}}</string>
                 <key>sourceSize</key>
@@ -761,11 +761,11 @@
             <key>R_DressUp-29 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1528,2},{32,44}}</string>
+                <string>{{794,184},{32,44}}</string>
                 <key>offset</key>
                 <string>{-7,-3}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{2,6},{32,44}}</string>
                 <key>sourceSize</key>
@@ -774,7 +774,7 @@
             <key>R_DressUp-3 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1076,98},{34,44}}</string>
+                <string>{{438,138},{34,44}}</string>
                 <key>offset</key>
                 <string>{-5,-3}</string>
                 <key>rotated</key>
@@ -787,7 +787,7 @@
             <key>R_DressUp-30 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1756,94},{38,38}}</string>
+                <string>{{728,214},{38,38}}</string>
                 <key>offset</key>
                 <string>{-4,-6}</string>
                 <key>rotated</key>
@@ -800,7 +800,7 @@
             <key>R_DressUp-31 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1832,94},{44,32}}</string>
+                <string>{{708,146},{44,32}}</string>
                 <key>offset</key>
                 <string>{2,-9}</string>
                 <key>rotated</key>
@@ -813,11 +813,11 @@
             <key>R_DressUp-32 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{358,66},{50,46}}</string>
+                <string>{{570,2},{50,46}}</string>
                 <key>offset</key>
                 <string>{0,-2}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,4},{50,46}}</string>
                 <key>sourceSize</key>
@@ -826,11 +826,11 @@
             <key>R_DressUp-33 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{398,2},{50,46}}</string>
+                <string>{{622,2},{50,46}}</string>
                 <key>offset</key>
                 <string>{0,-2}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,4},{50,46}}</string>
                 <key>sourceSize</key>
@@ -839,11 +839,11 @@
             <key>R_DressUp-34 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,78},{50,48}}</string>
+                <string>{{674,2},{50,48}}</string>
                 <key>offset</key>
                 <string>{0,-1}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,2},{50,48}}</string>
                 <key>sourceSize</key>
@@ -852,11 +852,11 @@
             <key>R_DressUp-35 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{52,76},{50,48}}</string>
+                <string>{{726,2},{50,48}}</string>
                 <key>offset</key>
                 <string>{0,-1}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,2},{50,48}}</string>
                 <key>sourceSize</key>
@@ -865,11 +865,11 @@
             <key>R_DressUp-36 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{348,2},{50,48}}</string>
+                <string>{{778,2},{50,48}}</string>
                 <key>offset</key>
                 <string>{0,-1}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,2},{50,48}}</string>
                 <key>sourceSize</key>
@@ -878,11 +878,11 @@
             <key>R_DressUp-37 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{406,66},{50,46}}</string>
+                <string>{{138,40},{50,46}}</string>
                 <key>offset</key>
                 <string>{0,-2}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,4},{50,46}}</string>
                 <key>sourceSize</key>
@@ -891,7 +891,7 @@
             <key>R_DressUp-38 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{446,2},{50,46}}</string>
+                <string>{{274,34},{50,46}}</string>
                 <key>offset</key>
                 <string>{0,-2}</string>
                 <key>rotated</key>
@@ -904,11 +904,11 @@
             <key>R_DressUp-39 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{358,66},{50,46}}</string>
+                <string>{{570,2},{50,46}}</string>
                 <key>offset</key>
                 <string>{0,-2}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,4},{50,46}}</string>
                 <key>sourceSize</key>
@@ -917,11 +917,11 @@
             <key>R_DressUp-4 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{872,50},{38,46}}</string>
+                <string>{{612,102},{38,46}}</string>
                 <key>offset</key>
                 <string>{-4,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{2,4},{38,46}}</string>
                 <key>sourceSize</key>
@@ -930,11 +930,11 @@
             <key>R_DressUp-40 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{398,2},{50,46}}</string>
+                <string>{{622,2},{50,46}}</string>
                 <key>offset</key>
                 <string>{0,-2}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,4},{50,46}}</string>
                 <key>sourceSize</key>
@@ -943,11 +943,11 @@
             <key>R_DressUp-41 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,78},{50,48}}</string>
+                <string>{{674,2},{50,48}}</string>
                 <key>offset</key>
                 <string>{0,-1}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,2},{50,48}}</string>
                 <key>sourceSize</key>
@@ -956,11 +956,11 @@
             <key>R_DressUp-42 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{52,76},{50,48}}</string>
+                <string>{{726,2},{50,48}}</string>
                 <key>offset</key>
                 <string>{0,-1}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,2},{50,48}}</string>
                 <key>sourceSize</key>
@@ -969,11 +969,11 @@
             <key>R_DressUp-43 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{348,2},{50,48}}</string>
+                <string>{{778,2},{50,48}}</string>
                 <key>offset</key>
                 <string>{0,-1}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,2},{50,48}}</string>
                 <key>sourceSize</key>
@@ -982,11 +982,11 @@
             <key>R_DressUp-44 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{406,66},{50,46}}</string>
+                <string>{{138,40},{50,46}}</string>
                 <key>offset</key>
                 <string>{0,-2}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,4},{50,46}}</string>
                 <key>sourceSize</key>
@@ -995,7 +995,7 @@
             <key>R_DressUp-45 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{446,2},{50,46}}</string>
+                <string>{{274,34},{50,46}}</string>
                 <key>offset</key>
                 <string>{0,-2}</string>
                 <key>rotated</key>
@@ -1008,11 +1008,11 @@
             <key>R_DressUp-46 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{358,66},{50,46}}</string>
+                <string>{{570,2},{50,46}}</string>
                 <key>offset</key>
                 <string>{0,-2}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,4},{50,46}}</string>
                 <key>sourceSize</key>
@@ -1021,11 +1021,11 @@
             <key>R_DressUp-47 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{398,2},{50,46}}</string>
+                <string>{{622,2},{50,46}}</string>
                 <key>offset</key>
                 <string>{0,-2}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,4},{50,46}}</string>
                 <key>sourceSize</key>
@@ -1034,11 +1034,11 @@
             <key>R_DressUp-48 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,78},{50,48}}</string>
+                <string>{{674,2},{50,48}}</string>
                 <key>offset</key>
                 <string>{0,-1}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,2},{50,48}}</string>
                 <key>sourceSize</key>
@@ -1047,11 +1047,11 @@
             <key>R_DressUp-49 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{52,76},{50,48}}</string>
+                <string>{{726,2},{50,48}}</string>
                 <key>offset</key>
                 <string>{0,-1}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,2},{50,48}}</string>
                 <key>sourceSize</key>
@@ -1060,11 +1060,11 @@
             <key>R_DressUp-5 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{670,50},{40,46}}</string>
+                <string>{{660,104},{40,46}}</string>
                 <key>offset</key>
                 <string>{-3,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{2,4},{40,46}}</string>
                 <key>sourceSize</key>
@@ -1073,11 +1073,11 @@
             <key>R_DressUp-50 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{348,2},{50,48}}</string>
+                <string>{{778,2},{50,48}}</string>
                 <key>offset</key>
                 <string>{0,-1}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,2},{50,48}}</string>
                 <key>sourceSize</key>
@@ -1086,11 +1086,11 @@
             <key>R_DressUp-51 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{406,66},{50,46}}</string>
+                <string>{{138,40},{50,46}}</string>
                 <key>offset</key>
                 <string>{0,-2}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,4},{50,46}}</string>
                 <key>sourceSize</key>
@@ -1099,7 +1099,7 @@
             <key>R_DressUp-52 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{446,2},{50,46}}</string>
+                <string>{{274,34},{50,46}}</string>
                 <key>offset</key>
                 <string>{0,-2}</string>
                 <key>rotated</key>
@@ -1112,11 +1112,11 @@
             <key>R_DressUp-53 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1426,2},{32,44}}</string>
+                <string>{{754,146},{32,44}}</string>
                 <key>offset</key>
                 <string>{-7,-3}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{2,6},{32,44}}</string>
                 <key>sourceSize</key>
@@ -1125,11 +1125,11 @@
             <key>R_DressUp-6 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{696,2},{40,46}}</string>
+                <string>{{708,104},{40,46}}</string>
                 <key>offset</key>
                 <string>{-3,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{2,4},{40,46}}</string>
                 <key>sourceSize</key>
@@ -1138,11 +1138,11 @@
             <key>R_DressUp-7 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1494,2},{32,44}}</string>
+                <string>{{702,180},{32,44}}</string>
                 <key>offset</key>
                 <string>{-7,-3}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{2,6},{32,44}}</string>
                 <key>sourceSize</key>
@@ -1151,11 +1151,11 @@
             <key>R_DressUp-8 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1500,48},{32,44}}</string>
+                <string>{{748,180},{32,44}}</string>
                 <key>offset</key>
                 <string>{-7,-3}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{2,6},{32,44}}</string>
                 <key>sourceSize</key>
@@ -1164,7 +1164,7 @@
             <key>R_DressUp-9 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{948,50},{32,46}}</string>
+                <string>{{140,192},{32,46}}</string>
                 <key>offset</key>
                 <string>{-7,-2}</string>
                 <key>rotated</key>
@@ -1177,11 +1177,11 @@
             <key>R_Love-1 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1534,48},{32,44}}</string>
+                <string>{{840,186},{32,44}}</string>
                 <key>offset</key>
                 <string>{5,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{13,4},{32,44}}</string>
                 <key>sourceSize</key>
@@ -1190,11 +1190,11 @@
             <key>R_Love-10 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1382,94},{40,42}}</string>
+                <string>{{350,82},{40,42}}</string>
                 <key>offset</key>
                 <string>{-1,-3}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{3,6},{40,42}}</string>
                 <key>sourceSize</key>
@@ -1203,11 +1203,11 @@
             <key>R_Love-11 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1310,48},{40,44}}</string>
+                <string>{{842,102},{40,44}}</string>
                 <key>offset</key>
                 <string>{-2,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{2,4},{40,44}}</string>
                 <key>sourceSize</key>
@@ -1216,11 +1216,11 @@
             <key>R_Love-12 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1386,2},{38,44}}</string>
+                <string>{{226,86},{38,44}}</string>
                 <key>offset</key>
                 <string>{-1,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{4,4},{38,44}}</string>
                 <key>sourceSize</key>
@@ -1229,11 +1229,11 @@
             <key>R_Love-13 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1392,48},{38,44}}</string>
+                <string>{{272,86},{38,44}}</string>
                 <key>offset</key>
                 <string>{-1,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{4,4},{38,44}}</string>
                 <key>sourceSize</key>
@@ -1242,11 +1242,11 @@
             <key>R_Love-14 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{898,2},{38,46}}</string>
+                <string>{{888,102},{38,46}}</string>
                 <key>offset</key>
                 <string>{-1,-1}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{4,2},{38,46}}</string>
                 <key>sourceSize</key>
@@ -1255,11 +1255,11 @@
             <key>R_Love-15 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{638,98},{36,46}}</string>
+                <string>{{322,32},{36,46}}</string>
                 <key>offset</key>
                 <string>{0,-1}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{6,2},{36,46}}</string>
                 <key>sourceSize</key>
@@ -1268,7 +1268,7 @@
             <key>R_Love-16 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{778,98},{36,44}}</string>
+                <string>{{260,196},{36,44}}</string>
                 <key>offset</key>
                 <string>{0,-2}</string>
                 <key>rotated</key>
@@ -1281,7 +1281,7 @@
             <key>R_Love-2 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1878,94},{32,42}}</string>
+                <string>{{314,176},{32,42}}</string>
                 <key>offset</key>
                 <string>{4,-3}</string>
                 <key>rotated</key>
@@ -1294,7 +1294,7 @@
             <key>R_Love-3 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1122,98},{34,42}}</string>
+                <string>{{358,174},{34,42}}</string>
                 <key>offset</key>
                 <string>{3,-3}</string>
                 <key>rotated</key>
@@ -1307,7 +1307,7 @@
             <key>R_Love-4 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1166,98},{34,42}}</string>
+                <string>{{402,174},{34,42}}</string>
                 <key>offset</key>
                 <string>{2,-3}</string>
                 <key>rotated</key>
@@ -1320,7 +1320,7 @@
             <key>R_Love-5 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1210,98},{34,42}}</string>
+                <string>{{806,220},{34,42}}</string>
                 <key>offset</key>
                 <string>{2,-3}</string>
                 <key>rotated</key>
@@ -1333,7 +1333,7 @@
             <key>R_Love-6 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{912,98},{36,42}}</string>
+                <string>{{510,218},{36,42}}</string>
                 <key>offset</key>
                 <string>{1,-3}</string>
                 <key>rotated</key>
@@ -1346,11 +1346,11 @@
             <key>R_Love-7 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1426,94},{40,42}}</string>
+                <string>{{392,94},{40,42}}</string>
                 <key>offset</key>
                 <string>{-1,-3}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{3,6},{40,42}}</string>
                 <key>sourceSize</key>
@@ -1359,7 +1359,7 @@
             <key>R_Love-8 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1344,2},{40,44}}</string>
+                <string>{{174,192},{40,44}}</string>
                 <key>offset</key>
                 <string>{-1,-2}</string>
                 <key>rotated</key>
@@ -1372,11 +1372,11 @@
             <key>R_Love-9 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1470,94},{40,42}}</string>
+                <string>{{434,94},{40,42}}</string>
                 <key>offset</key>
                 <string>{-1,-3}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{3,6},{40,42}}</string>
                 <key>sourceSize</key>
@@ -1385,7 +1385,7 @@
             <key>R_Magic-1 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{310,130},{1,1}}</string>
+                <string>{{210,34},{1,1}}</string>
                 <key>offset</key>
                 <string>{-24.5,24.5}</string>
                 <key>rotated</key>
@@ -1398,7 +1398,7 @@
             <key>R_Magic-10 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1636,94},{30,40}}</string>
+                <string>{{484,138},{30,40}}</string>
                 <key>offset</key>
                 <string>{2,-5}</string>
                 <key>rotated</key>
@@ -1411,7 +1411,7 @@
             <key>R_Magic-11 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1972,92},{30,42}}</string>
+                <string>{{1218,200},{30,42}}</string>
                 <key>offset</key>
                 <string>{6,-4}</string>
                 <key>rotated</key>
@@ -1424,11 +1424,11 @@
             <key>R_Magic-12 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1922,94},{32,42}}</string>
+                <string>{{886,176},{32,42}}</string>
                 <key>offset</key>
                 <string>{9,-4}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{18,8},{32,42}}</string>
                 <key>sourceSize</key>
@@ -1437,7 +1437,7 @@
             <key>R_Magic-13 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1562,2},{32,44}}</string>
+                <string>{{306,210},{32,44}}</string>
                 <key>offset</key>
                 <string>{9,-3}</string>
                 <key>rotated</key>
@@ -1450,7 +1450,7 @@
             <key>R_Magic-14 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1568,48},{32,44}}</string>
+                <string>{{340,210},{32,44}}</string>
                 <key>offset</key>
                 <string>{9,-3}</string>
                 <key>rotated</key>
@@ -1463,7 +1463,7 @@
             <key>R_Magic-15 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1596,2},{32,44}}</string>
+                <string>{{374,210},{32,44}}</string>
                 <key>offset</key>
                 <string>{9,-3}</string>
                 <key>rotated</key>
@@ -1476,7 +1476,7 @@
             <key>R_Magic-16 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1602,48},{32,44}}</string>
+                <string>{{408,210},{32,44}}</string>
                 <key>offset</key>
                 <string>{9,-3}</string>
                 <key>rotated</key>
@@ -1489,7 +1489,7 @@
             <key>R_Magic-17 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1630,2},{32,44}}</string>
+                <string>{{442,210},{32,44}}</string>
                 <key>offset</key>
                 <string>{9,-3}</string>
                 <key>rotated</key>
@@ -1502,7 +1502,7 @@
             <key>R_Magic-18 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1636,48},{32,44}}</string>
+                <string>{{476,210},{32,44}}</string>
                 <key>offset</key>
                 <string>{9,-3}</string>
                 <key>rotated</key>
@@ -1515,7 +1515,7 @@
             <key>R_Magic-19 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1664,2},{32,44}}</string>
+                <string>{{554,210},{32,44}}</string>
                 <key>offset</key>
                 <string>{9,-3}</string>
                 <key>rotated</key>
@@ -1528,11 +1528,11 @@
             <key>R_Magic-2 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{46,130},{32,2}}</string>
+                <string>{{134,50},{32,2}}</string>
                 <key>offset</key>
                 <string>{-1,-24}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{8,48},{32,2}}</string>
                 <key>sourceSize</key>
@@ -1541,7 +1541,7 @@
             <key>R_Magic-20 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1670,48},{32,44}}</string>
+                <string>{{588,210},{32,44}}</string>
                 <key>offset</key>
                 <string>{9,-3}</string>
                 <key>rotated</key>
@@ -1554,7 +1554,7 @@
             <key>R_Magic-21 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1698,2},{32,44}}</string>
+                <string>{{622,210},{32,44}}</string>
                 <key>offset</key>
                 <string>{9,-3}</string>
                 <key>rotated</key>
@@ -1567,11 +1567,11 @@
             <key>R_Magic-22 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1704,48},{32,44}}</string>
+                <string>{{888,142},{32,44}}</string>
                 <key>offset</key>
                 <string>{9,-3}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{18,6},{32,44}}</string>
                 <key>sourceSize</key>
@@ -1580,11 +1580,11 @@
             <key>R_Magic-23 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{972,2},{32,46}}</string>
+                <string>{{134,88},{32,46}}</string>
                 <key>offset</key>
                 <string>{9,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{18,4},{32,46}}</string>
                 <key>sourceSize</key>
@@ -1593,11 +1593,11 @@
             <key>R_Magic-24 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{982,50},{32,46}}</string>
+                <string>{{176,126},{32,46}}</string>
                 <key>offset</key>
                 <string>{9,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{18,4},{32,46}}</string>
                 <key>sourceSize</key>
@@ -1606,11 +1606,11 @@
             <key>R_Magic-25 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1732,2},{32,44}}</string>
+                <string>{{934,142},{32,44}}</string>
                 <key>offset</key>
                 <string>{9,-3}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{18,6},{32,44}}</string>
                 <key>sourceSize</key>
@@ -1619,11 +1619,11 @@
             <key>R_Magic-26 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1738,48},{32,44}}</string>
+                <string>{{920,176},{32,44}}</string>
                 <key>offset</key>
                 <string>{9,-3}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{18,6},{32,44}}</string>
                 <key>sourceSize</key>
@@ -1632,7 +1632,7 @@
             <key>R_Magic-27 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1766,2},{32,44}}</string>
+                <string>{{920,210},{32,44}}</string>
                 <key>offset</key>
                 <string>{9,-3}</string>
                 <key>rotated</key>
@@ -1645,7 +1645,7 @@
             <key>R_Magic-28 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1772,48},{32,44}}</string>
+                <string>{{954,210},{32,44}}</string>
                 <key>offset</key>
                 <string>{9,-3}</string>
                 <key>rotated</key>
@@ -1658,11 +1658,11 @@
             <key>R_Magic-29 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1800,2},{32,44}}</string>
+                <string>{{966,176},{32,44}}</string>
                 <key>offset</key>
                 <string>{9,-3}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{18,6},{32,44}}</string>
                 <key>sourceSize</key>
@@ -1671,11 +1671,11 @@
             <key>R_Magic-3 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{80,128},{38,6}}</string>
+                <string>{{1294,94},{38,6}}</string>
                 <key>offset</key>
                 <string>{-2,-22}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{4,44},{38,6}}</string>
                 <key>sourceSize</key>
@@ -1684,7 +1684,7 @@
             <key>R_Magic-30 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1806,48},{32,44}}</string>
+                <string>{{988,210},{32,44}}</string>
                 <key>offset</key>
                 <string>{9,-3}</string>
                 <key>rotated</key>
@@ -1697,7 +1697,7 @@
             <key>R_Magic-31 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1834,2},{32,44}}</string>
+                <string>{{1012,160},{32,44}}</string>
                 <key>offset</key>
                 <string>{9,-3}</string>
                 <key>rotated</key>
@@ -1710,7 +1710,7 @@
             <key>R_Magic-32 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1908,48},{30,44}}</string>
+                <string>{{1056,206},{30,44}}</string>
                 <key>offset</key>
                 <string>{10,-3}</string>
                 <key>rotated</key>
@@ -1723,7 +1723,7 @@
             <key>R_Magic-33 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1936,2},{30,44}}</string>
+                <string>{{1088,200},{30,44}}</string>
                 <key>offset</key>
                 <string>{10,-3}</string>
                 <key>rotated</key>
@@ -1736,7 +1736,7 @@
             <key>R_Magic-34 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1940,48},{30,44}}</string>
+                <string>{{1120,200},{30,44}}</string>
                 <key>offset</key>
                 <string>{10,-3}</string>
                 <key>rotated</key>
@@ -1749,11 +1749,11 @@
             <key>R_Magic-35 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1238,2},{30,46}}</string>
+                <string>{{170,160},{30,46}}</string>
                 <key>offset</key>
                 <string>{10,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{20,4},{30,46}}</string>
                 <key>sourceSize</key>
@@ -1762,11 +1762,11 @@
             <key>R_Magic-36 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1246,50},{30,46}}</string>
+                <string>{{218,160},{30,46}}</string>
                 <key>offset</key>
                 <string>{10,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{20,4},{30,46}}</string>
                 <key>sourceSize</key>
@@ -1775,11 +1775,11 @@
             <key>R_Magic-37 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1270,2},{30,46}}</string>
+                <string>{{266,164},{30,46}}</string>
                 <key>offset</key>
                 <string>{10,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{20,4},{30,46}}</string>
                 <key>sourceSize</key>
@@ -1788,7 +1788,7 @@
             <key>R_Magic-38 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1278,50},{30,46}}</string>
+                <string>{{318,86},{30,46}}</string>
                 <key>offset</key>
                 <string>{10,-2}</string>
                 <key>rotated</key>
@@ -1801,7 +1801,7 @@
             <key>R_Magic-39 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1968,2},{30,44}}</string>
+                <string>{{1152,200},{30,44}}</string>
                 <key>offset</key>
                 <string>{10,-3}</string>
                 <key>rotated</key>
@@ -1814,7 +1814,7 @@
             <key>R_Magic-4 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{348,54},{44,10}}</string>
+                <string>{{216,234},{44,10}}</string>
                 <key>offset</key>
                 <string>{-3,-20}</string>
                 <key>rotated</key>
@@ -1827,11 +1827,11 @@
             <key>R_Magic-40 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1006,2},{32,46}}</string>
+                <string>{{224,126},{32,46}}</string>
                 <key>offset</key>
                 <string>{9,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{18,4},{32,46}}</string>
                 <key>sourceSize</key>
@@ -1840,7 +1840,7 @@
             <key>R_Magic-41 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1016,50},{32,46}}</string>
+                <string>{{358,126},{32,46}}</string>
                 <key>offset</key>
                 <string>{9,-2}</string>
                 <key>rotated</key>
@@ -1853,11 +1853,11 @@
             <key>R_Magic-42 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1040,2},{32,46}}</string>
+                <string>{{516,128},{32,46}}</string>
                 <key>offset</key>
                 <string>{9,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{18,4},{32,46}}</string>
                 <key>sourceSize</key>
@@ -1866,11 +1866,11 @@
             <key>R_Magic-43 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1050,50},{32,46}}</string>
+                <string>{{564,142},{32,46}}</string>
                 <key>offset</key>
                 <string>{9,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{18,4},{32,46}}</string>
                 <key>sourceSize</key>
@@ -1879,11 +1879,11 @@
             <key>R_Magic-44 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1074,2},{32,46}}</string>
+                <string>{{612,142},{32,46}}</string>
                 <key>offset</key>
                 <string>{9,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{18,4},{32,46}}</string>
                 <key>sourceSize</key>
@@ -1892,11 +1892,11 @@
             <key>R_Magic-45 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1084,50},{32,46}}</string>
+                <string>{{516,162},{32,46}}</string>
                 <key>offset</key>
                 <string>{9,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{18,4},{32,46}}</string>
                 <key>sourceSize</key>
@@ -1905,7 +1905,7 @@
             <key>R_Magic-46 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1840,48},{32,44}}</string>
+                <string>{{1046,160},{32,44}}</string>
                 <key>offset</key>
                 <string>{9,-3}</string>
                 <key>rotated</key>
@@ -1918,7 +1918,7 @@
             <key>R_Magic-47 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1868,2},{32,44}}</string>
+                <string>{{1022,206},{32,44}}</string>
                 <key>offset</key>
                 <string>{9,-3}</string>
                 <key>rotated</key>
@@ -1931,11 +1931,11 @@
             <key>R_Magic-48 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1874,48},{32,44}}</string>
+                <string>{{1080,166},{32,44}}</string>
                 <key>offset</key>
                 <string>{9,-3}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{18,6},{32,44}}</string>
                 <key>sourceSize</key>
@@ -1944,7 +1944,7 @@
             <key>R_Magic-49 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1596,2},{32,44}}</string>
+                <string>{{374,210},{32,44}}</string>
                 <key>offset</key>
                 <string>{9,-3}</string>
                 <key>rotated</key>
@@ -1957,11 +1957,11 @@
             <key>R_Magic-5 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{102,72},{42,16}}</string>
+                <string>{{2,238},{42,16}}</string>
                 <key>offset</key>
                 <string>{-4,-17}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,34},{42,16}}</string>
                 <key>sourceSize</key>
@@ -1970,11 +1970,11 @@
             <key>R_Magic-50 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{2000,2},{32,42}}</string>
+                <string>{{1184,200},{32,42}}</string>
                 <key>offset</key>
                 <string>{7,-4}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{16,8},{32,42}}</string>
                 <key>sourceSize</key>
@@ -1983,11 +1983,11 @@
             <key>R_Magic-51 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{2004,68},{30,42}}</string>
+                <string>{{1260,170},{30,42}}</string>
                 <key>offset</key>
                 <string>{6,-4}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{16,8},{30,42}}</string>
                 <key>sourceSize</key>
@@ -1996,7 +1996,7 @@
             <key>R_Magic-52 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{2004,100},{30,42}}</string>
+                <string>{{1250,214},{30,42}}</string>
                 <key>offset</key>
                 <string>{2,-4}</string>
                 <key>rotated</key>
@@ -2009,11 +2009,11 @@
             <key>R_Magic-53 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1296,98},{34,40}}</string>
+                <string>{{656,214},{34,40}}</string>
                 <key>offset</key>
                 <string>{-1,-5}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{7,10},{34,40}}</string>
                 <key>sourceSize</key>
@@ -2022,7 +2022,7 @@
             <key>R_Magic-54 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{956,98},{36,36}}</string>
+                <string>{{768,218},{36,36}}</string>
                 <key>offset</key>
                 <string>{-2,-7}</string>
                 <key>rotated</key>
@@ -2035,11 +2035,11 @@
             <key>R_Magic-55 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1254,98},{40,34}}</string>
+                <string>{{692,214},{40,34}}</string>
                 <key>offset</key>
                 <string>{-3,-8}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{2,16},{40,34}}</string>
                 <key>sourceSize</key>
@@ -2048,7 +2048,7 @@
             <key>R_Magic-56 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{454,106},{42,28}}</string>
+                <string>{{1216,170},{42,28}}</string>
                 <key>offset</key>
                 <string>{-4,-11}</string>
                 <key>rotated</key>
@@ -2061,7 +2061,7 @@
             <key>R_Magic-57 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1972,48},{42,20}}</string>
+                <string>{{982,102},{42,20}}</string>
                 <key>offset</key>
                 <string>{-4,-15}</string>
                 <key>rotated</key>
@@ -2074,7 +2074,7 @@
             <key>R_Magic-58 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{358,118},{44,14}}</string>
+                <string>{{46,240},{44,14}}</string>
                 <key>offset</key>
                 <string>{-3,-18}</string>
                 <key>rotated</key>
@@ -2087,7 +2087,7 @@
             <key>R_Magic-59 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{394,54},{42,10}}</string>
+                <string>{{262,234},{42,10}}</string>
                 <key>offset</key>
                 <string>{-4,-20}</string>
                 <key>rotated</key>
@@ -2100,7 +2100,7 @@
             <key>R_Magic-6 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{498,106},{42,22}}</string>
+                <string>{{132,122},{42,22}}</string>
                 <key>offset</key>
                 <string>{-4,-14}</string>
                 <key>rotated</key>
@@ -2113,7 +2113,7 @@
             <key>R_Magic-60 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,130},{42,4}}</string>
+                <string>{{1088,246},{42,4}}</string>
                 <key>offset</key>
                 <string>{-4,-23}</string>
                 <key>rotated</key>
@@ -2126,7 +2126,7 @@
             <key>R_Magic-61 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{310,130},{1,1}}</string>
+                <string>{{210,34},{1,1}}</string>
                 <key>offset</key>
                 <string>{-24.5,24.5}</string>
                 <key>rotated</key>
@@ -2139,7 +2139,7 @@
             <key>R_Magic-7 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{2000,36},{42,30}}</string>
+                <string>{{1172,168},{42,30}}</string>
                 <key>offset</key>
                 <string>{-4,-10}</string>
                 <key>rotated</key>
@@ -2152,11 +2152,11 @@
             <key>R_Magic-8 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{994,98},{36,34}}</string>
+                <string>{{446,174},{36,34}}</string>
                 <key>offset</key>
                 <string>{-2,-8}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{5,16},{36,34}}</string>
                 <key>sourceSize</key>
@@ -2165,11 +2165,11 @@
             <key>R_Magic-9 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1796,94},{34,38}}</string>
+                <string>{{850,220},{34,38}}</string>
                 <key>offset</key>
                 <string>{-1,-6}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{7,12},{34,38}}</string>
                 <key>sourceSize</key>
@@ -2178,11 +2178,11 @@
             <key>R_Sleep-1 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{574,2},{32,48}}</string>
+                <string>{{1004,94},{32,48}}</string>
                 <key>offset</key>
                 <string>{-8,0}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{14,0},{32,48}}</string>
                 <key>sourceSize</key>
@@ -2191,11 +2191,11 @@
             <key>R_Sleep-10 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{224,2},{68,30}}</string>
+                <string>{{360,2},{68,30}}</string>
                 <key>offset</key>
                 <string>{-1,-9}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{3,18},{68,30}}</string>
                 <key>sourceSize</key>
@@ -2204,11 +2204,11 @@
             <key>R_Sleep-11 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{74,30}}</string>
+                <string>{{210,2},{74,30}}</string>
                 <key>offset</key>
                 <string>{1,-9}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{2,18},{74,30}}</string>
                 <key>sourceSize</key>
@@ -2217,11 +2217,11 @@
             <key>R_Sleep-12 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{34,2},{72,28}}</string>
+                <string>{{286,2},{72,28}}</string>
                 <key>offset</key>
                 <string>{2,-10}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{4,20},{72,28}}</string>
                 <key>sourceSize</key>
@@ -2230,11 +2230,11 @@
             <key>R_Sleep-13 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{64,2},{70,36}}</string>
+                <string>{{138,2},{70,36}}</string>
                 <key>offset</key>
                 <string>{3,-6}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{6,12},{70,36}}</string>
                 <key>sourceSize</key>
@@ -2243,11 +2243,11 @@
             <key>R_Sleep-14 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{102,2},{68,46}}</string>
+                <string>{{2,2},{68,46}}</string>
                 <key>offset</key>
                 <string>{4,-1}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{8,2},{68,46}}</string>
                 <key>sourceSize</key>
@@ -2256,11 +2256,11 @@
             <key>R_Sleep-15 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{256,2},{66,46}}</string>
+                <string>{{2,50},{66,46}}</string>
                 <key>offset</key>
                 <string>{5,-1}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{10,2},{66,46}}</string>
                 <key>sourceSize</key>
@@ -2269,11 +2269,11 @@
             <key>R_Sleep-16 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{262,70},{64,46}}</string>
+                <string>{{72,2},{64,46}}</string>
                 <key>offset</key>
                 <string>{6,-1}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{12,2},{64,46}}</string>
                 <key>sourceSize</key>
@@ -2282,11 +2282,11 @@
             <key>R_Sleep-17 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{120,72},{62,46}}</string>
+                <string>{{2,98},{62,46}}</string>
                 <key>offset</key>
                 <string>{7,-1}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{14,2},{62,46}}</string>
                 <key>sourceSize</key>
@@ -2295,11 +2295,11 @@
             <key>R_Sleep-18 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{168,72},{62,46}}</string>
+                <string>{{70,50},{62,46}}</string>
                 <key>offset</key>
                 <string>{7,-1}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{14,2},{62,46}}</string>
                 <key>sourceSize</key>
@@ -2308,11 +2308,11 @@
             <key>R_Sleep-2 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1108,2},{32,46}}</string>
+                <string>{{660,146},{32,46}}</string>
                 <key>offset</key>
                 <string>{-11,-1}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{11,2},{32,46}}</string>
                 <key>sourceSize</key>
@@ -2321,11 +2321,11 @@
             <key>R_Sleep-3 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{1902,2},{32,44}}</string>
+                <string>{{1126,166},{32,44}}</string>
                 <key>offset</key>
                 <string>{-15,-2}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{7,4},{32,44}}</string>
                 <key>sourceSize</key>
@@ -2334,11 +2334,11 @@
             <key>R_Sleep-4 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{454,54},{50,46}}</string>
+                <string>{{360,34},{50,46}}</string>
                 <key>offset</key>
                 <string>{-13,-1}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,2},{50,46}}</string>
                 <key>sourceSize</key>
@@ -2347,11 +2347,11 @@
             <key>R_Sleep-5 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{310,68},{60,46}}</string>
+                <string>{{2,146},{60,46}}</string>
                 <key>offset</key>
                 <string>{-8,-1}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,2},{60,46}}</string>
                 <key>sourceSize</key>
@@ -2360,11 +2360,11 @@
             <key>R_Sleep-6 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{216,72},{62,44}}</string>
+                <string>{{66,98},{62,44}}</string>
                 <key>offset</key>
                 <string>{-7,-2}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,4},{62,44}}</string>
                 <key>sourceSize</key>
@@ -2373,11 +2373,11 @@
             <key>R_Sleep-7 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{304,2},{64,42}}</string>
+                <string>{{2,194},{64,42}}</string>
                 <key>offset</key>
                 <string>{-6,-3}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,6},{64,42}}</string>
                 <key>sourceSize</key>
@@ -2386,11 +2386,11 @@
             <key>R_Sleep-8 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{150,2},{68,38}}</string>
+                <string>{{430,2},{68,38}}</string>
                 <key>offset</key>
                 <string>{-4,-5}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,10},{68,38}}</string>
                 <key>sourceSize</key>
@@ -2399,15 +2399,262 @@
             <key>R_Sleep-9 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
-                <string>{{190,2},{68,32}}</string>
+                <string>{{500,2},{68,32}}</string>
                 <key>offset</key>
                 <string>{-1,-8}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{3,16},{68,32}}</string>
                 <key>sourceSize</key>
                 <string>{76,48}</string>
+            </dict>
+            <key>R_Tantrum-1 (dragged).tiff</key>
+            <dict>
+                <key>frame</key>
+                <string>{{830,2},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
+            <key>R_Tantrum-10 (dragged).tiff</key>
+            <dict>
+                <key>frame</key>
+                <string>{{882,2},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
+            <key>R_Tantrum-11 (dragged).tiff</key>
+            <dict>
+                <key>frame</key>
+                <string>{{934,2},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
+            <key>R_Tantrum-12 (dragged).tiff</key>
+            <dict>
+                <key>frame</key>
+                <string>{{986,2},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
+            <key>R_Tantrum-13 (dragged).tiff</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1038,2},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
+            <key>R_Tantrum-14 (dragged).tiff</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1090,2},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
+            <key>R_Tantrum-15 (dragged).tiff</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1142,2},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
+            <key>R_Tantrum-16 (dragged).tiff</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1194,2},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
+            <key>R_Tantrum-17 (dragged).tiff</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1246,2},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
+            <key>R_Tantrum-18 (dragged).tiff</key>
+            <dict>
+                <key>frame</key>
+                <string>{{222,34},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
+            <key>R_Tantrum-19 (dragged).tiff</key>
+            <dict>
+                <key>frame</key>
+                <string>{{830,2},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
+            <key>R_Tantrum-2 (dragged).tiff</key>
+            <dict>
+                <key>frame</key>
+                <string>{{412,42},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
+            <key>R_Tantrum-3 (dragged).tiff</key>
+            <dict>
+                <key>frame</key>
+                <string>{{464,42},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
+            <key>R_Tantrum-4 (dragged).tiff</key>
+            <dict>
+                <key>frame</key>
+                <string>{{516,36},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
+            <key>R_Tantrum-5 (dragged).tiff</key>
+            <dict>
+                <key>frame</key>
+                <string>{{568,50},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
+            <key>R_Tantrum-6 (dragged).tiff</key>
+            <dict>
+                <key>frame</key>
+                <string>{{620,50},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
+            <key>R_Tantrum-7 (dragged).tiff</key>
+            <dict>
+                <key>frame</key>
+                <string>{{672,52},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
+            <key>R_Tantrum-8 (dragged).tiff</key>
+            <dict>
+                <key>frame</key>
+                <string>{{724,52},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
+            <key>R_Tantrum-9 (dragged).tiff</key>
+            <dict>
+                <key>frame</key>
+                <string>{{776,52},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -2417,9 +2664,9 @@
             <key>realTextureFileName</key>
             <string>rabbit.png</string>
             <key>size</key>
-            <string>{2048,136}</string>
+            <string>{1303,256}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:95a9689bca05da9a9179ebfa0d696b61:0ee649a2e007f5f01acff9ef956db8be:f8d53ec90c715fde90104b9a974c73ba$</string>
+            <string>$TexturePacker:SmartUpdate:460c749d23c68ee671db119b6a359a71:56a9f2e47363cc9b40d720a5f0559dda:f8d53ec90c715fde90104b9a974c73ba$</string>
             <key>textureFileName</key>
             <string>rabbit.png</string>
         </dict>

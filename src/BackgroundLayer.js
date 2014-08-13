@@ -38,10 +38,10 @@ var BackgroundLayer = cc.Layer.extend({
             cc.eventManager.addListener({
                 event: cc.EventListener.KEYBOARD,
                 onKeyPressed: function (key) {
-                    cc.log("Key down:" + key);
+                    //cc.log("Key down:" + key);
                 },
                 onKeyReleased: function (key) {
-                    cc.log("Key up:" + key);
+                    //cc.log("Key up:" + key);
                     switch(key) {
                         case 50: // press 2
                             that.toggleController();

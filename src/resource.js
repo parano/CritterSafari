@@ -17,7 +17,18 @@ var res = {
     phoenix_plist       : "res/Particles/Phoenix.plist",
     fire_png            : "res/Particles/fire.png",
     love_png            : "res/Particles/love.png",
-    sleeping_plist      : "res/Particles/sleeping.plist"
+    sleeping_plist      : "res/Particles/sleeping.plist",
+
+    //objects
+    fox_plist           : "res/Objects/fox.plist",
+    fox_png             : "res/Objects/fox.png",
+    monkey_plist        : "res/Objects/monkey.plist",
+    monkey_png          : "res/Objects/monkey.png",
+    pig_plist           : "res/Objects/pig.plist",
+    pig_png             : "res/Objects/pig.png",
+    rabbit_plist        : "res/Objects/rabbit.plist",
+    rabbit_png          : "res/Objects/rabbit.png"
+
 };
 
 var g_resources = [
@@ -42,7 +53,7 @@ var g_resources = [
     res.magic_mp3,
     res.dressup_mp3,
     res.love_mp3,
-    res.tantrum_mp3
+    res.tantrum_mp3,
     //fnt
 
     //tmx
@@ -50,5 +61,15 @@ var g_resources = [
     //bgm
 
     //effect
+
+    //objects
+    res.fox_plist,
+    res.fox_png,
+    res.monkey_plist,
+    res.monkey_png,
+    res.pig_plist,
+    res.pig_png,
+    res.rabbit_plist,
+    res.rabbit_png
 ];
 

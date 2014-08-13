@@ -19,7 +19,14 @@ var Constants = {
         [{x:238, y:1082}, {x:479, y:1061}, {x:754, y:1073}, {x:1013, y:1082}, {x:1287, y:1068}],
         [{x:236, y:840}, {x:505, y:836}, {x:737, y:853}, {x:1008, y:861}, {x:1298, y:843}],
         [{x:231, y:623}, {x:496, y:569}, {x:726, y:576}, null, {x:1312, y:595}]
-    ]
+    ],
+    // fox monkey pig rabbit
+    dancingFramesLen: [16, 45, 20, 37],
+    dressupFramesLen: [6, 45, 10, 53],
+    loveFramesLen: [16, 13, 20, 16],
+    magicFramesLen: [32, 9, 5, 61],
+    sleepFramesLen: [5, 20, 45, 18],
+    tantrumFramesLen: [16, 4, 22, 19]
 };
 
 var Config = {

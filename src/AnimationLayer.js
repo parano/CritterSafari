@@ -37,13 +37,13 @@ var AnimationLayer = cc.Layer.extend({
             cc.eventManager.addListener({
                 event: cc.EventListener.KEYBOARD,
                 onKeyPressed: function (key, event) {
-                    cc.log("Key down:" + key);
+                    //("Key down:" + key);
                 },
                 onKeyReleased: function (key, event) {
                     //cc.log("Key up:" + key);
                     if(+Config.ls.getItem('controller') === that.character_id) {
-                        cc.log(Config.ls.getItem('controller'));
-                        cc.log(that.character_id);
+//                        cc.log(Config.ls.getItem('controller'));
+//                        cc.log(that.character_id);
                         switch (key) {
                             // move princess
                             case 37: // press left arrow
