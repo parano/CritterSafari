@@ -7,13 +7,27 @@ var AnimationLayer = cc.Layer.extend({
     runningAction: null,
     sprite: null,
     s: null,
-    row: 4,
-    col: 0,
+    starting_row: null,
+    starting_col: null,
+    row: null,
+    col: null,
     tileMatrix: null,
     animation: null,
+    colors: ['pink', 'green', 'blue'],
+    color: null,
+    character_id: null,
 
-    ctor: function () {
+    ctor: function (character_id, starting_row, starting_col) {
         this._super();
+
+        this.character_id = character_id;
+        var color_id = Config.ls.getItem('princess1');
+        this.color = this.colors[color_id];
+        this.starting_row = starting_row;
+        this.starting_col = starting_col;
+        this.row = starting_row;
+        this.col = starting_col;
+
         this.init();
     },
 
@@ -52,14 +66,8 @@ var AnimationLayer = cc.Layer.extend({
                             break;
 
                         // change princess
-                        case 49: // press 1
-                            that.changePrincess("pink");
-                            break;
-                        case 50: // press 2
-                            that.changePrincess("pink");
-                            break;
-                        case 51: // press 3
-                            that.changePrincess("pink");
+                        case 81: // press q
+                            that.nextColor();
                             break;
 
                         // actions:
@@ -99,14 +107,14 @@ var AnimationLayer = cc.Layer.extend({
         // init runningAction
         var animationFrames = [];
         for (var i = 1; i <= 3; i++) {
-            var str = "pink_front_" + i + ".png";
+            var str = this.color + "_front_" + i + ".png";
             var frame = cc.spriteFrameCache.getSpriteFrame(str);
             animationFrames.push(frame);
         }
 
         this.animation = cc.Animation.create(animationFrames, 0.3);
         this.runningAction = cc.RepeatForever.create(cc.Animate.create(this.animation));
-        this.sprite = cc.Sprite.create("#pink_front_1.png");
+        this.sprite = cc.Sprite.create("#" + this.color +"_front_1.png");
         this.sprite.attr({
             //scaleX: this.scaleRatioX(),
             //scaleY: this.scaleRatioY(),
@@ -193,8 +201,8 @@ var AnimationLayer = cc.Layer.extend({
     },
 
     resetPrincess: function() {
-        this.row = 4;
-        this.col = 0;
+        this.row = this.starting_row;
+        this.col = this.starting_col;
         this.updatePosition(0.3);
     },
 
@@ -306,7 +314,7 @@ var AnimationLayer = cc.Layer.extend({
 
         this.sprite.stopAllActions();
         this.sprite.setSpriteFrame(
-            cc.spriteFrameCache.getSpriteFrame("pink_tantrum.png"));
+            cc.spriteFrameCache.getSpriteFrame(this.color + "_tantrum.png"));
 
         var animationDuration = 4;
         var distance = 13;
@@ -425,7 +433,7 @@ var AnimationLayer = cc.Layer.extend({
 
         this.sprite.stopAllActions();
         this.sprite.setSpriteFrame(
-            cc.spriteFrameCache.getSpriteFrame("pink_front_3.png"));
+            cc.spriteFrameCache.getSpriteFrame(this.color + "_front_3.png"));
 
         var emitter = cc.ParticleSystem.create(res.sleeping_plist);
         this.emitters.push(emitter);
@@ -461,8 +469,13 @@ var AnimationLayer = cc.Layer.extend({
         cc.game.run();
     },
 
-    changePrincess: function (princess) {
-        Config.ls.setItem('princess', princess);
+    nextColor: function() {
+        var color_id = Config.ls.getItem('princess1');
+        color_id = (++color_id)%3; // next id
+        Config.ls.setItem('princess'+this.character_id, color_id);
+        //this.color = this.colors[color_id];
         cc.game.run();
     }
+
+
 });

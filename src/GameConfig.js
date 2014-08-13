@@ -25,12 +25,15 @@ var Constants = {
 var Config = {
     ls: null,
     default_bg: "forest",
-    default_princess: "pink",
+    default_princess_id_1: 0,
+    default_princess_id_2: 1,
+
 
     init: function() {
         this.ls = cc.sys.localStorage;
         this.ls.setItem('bg', this.default_bg);
-        this.ls.setItem('princess', this.default_princess);
+        this.ls.setItem('princess1', this.default_princess_id_1);
+        this.ls.setItem('princess2', this.default_princess_id_2);
     }
 }
 
