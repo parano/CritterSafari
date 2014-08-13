@@ -58,10 +58,6 @@ var AnimationLayer = cc.Layer.extend({
                             case 40: // press down arrow
                                 that.move('down');
                                 break;
-//                            case 32: // press space
-//                                that.move('reset');
-//                                that.resetStyle(0.1);
-//                                break;
 
                             // change background
                             case 67: // press c
@@ -92,10 +88,6 @@ var AnimationLayer = cc.Layer.extend({
                             case 84: // press t
                                 that.actionTantrum();
                                 break;
-
-//                            case 50: // press 2, change controller
-//                                that.toggleController();
-//                                break;
                         }
                     }
                 }
@@ -115,16 +107,6 @@ var AnimationLayer = cc.Layer.extend({
         cc.eventManager.addListener(resetBoardListener, 1);
 
     },
-//
-//    toggleController: function() {
-//        if(+Config.ls.getItem('controller') === 1) {
-//            cc.log("change to 2");
-//            Config.ls.setItem('controller', 2);
-//        } else {
-//            cc.log("change to 1");
-//            Config.ls.setItem('controller', 1);
-//        }
-//    },
 
     initSprite: function() {
         // create sprite sheet
@@ -505,6 +487,4 @@ var AnimationLayer = cc.Layer.extend({
         //this.color = this.colors[color_id];
         cc.game.run();
     }
-
-
 });
