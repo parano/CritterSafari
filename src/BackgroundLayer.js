@@ -42,8 +42,13 @@ var BackgroundLayer = cc.Layer.extend({
                 },
                 onKeyReleased: function (key) {
                     cc.log("Key up:" + key);
-                    if(key === 50) {
-                        that.toggleController();
+                    switch(key) {
+                        case 50: // press 2
+                            that.toggleController();
+                            break;
+                        case 32: // press
+                            that.resetBoard();
+                            break;
                     }
                 }
             }, this);
@@ -56,6 +61,11 @@ var BackgroundLayer = cc.Layer.extend({
         } else {
             Config.ls.setItem('controller', 1);
         }
+    },
+
+    resetBoard: function() {
+        var event = new cc.EventCustom("board_reset");
+        cc.eventManager.dispatchEvent(event);
     },
 
 

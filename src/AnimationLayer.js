@@ -58,10 +58,10 @@ var AnimationLayer = cc.Layer.extend({
                             case 40: // press down arrow
                                 that.move('down');
                                 break;
-                            //case 32: // press space
-                            //    that.move('reset');
-                            //    that.resetStyle(0.1);
-                            //    break;
+//                            case 32: // press space
+//                                that.move('reset');
+//                                that.resetStyle(0.1);
+//                                break;
 
                             // change background
                             case 67: // press c
@@ -103,6 +103,17 @@ var AnimationLayer = cc.Layer.extend({
         } else {
             cc.log("KEYBOARD Not supported");
         }
+
+        var resetBoardListener = cc.EventListener.create({
+            event: cc.EventListener.CUSTOM,
+            eventName: "board_reset",
+            callback: function(event) {
+                that.move('reset');
+                that.resetStyle(0.1);
+            }
+        });
+        cc.eventManager.addListener(resetBoardListener, 1);
+
     },
 //
 //    toggleController: function() {
@@ -461,7 +472,7 @@ var AnimationLayer = cc.Layer.extend({
             scaleX: this.scaleRatioX()*2,
             scaleY: this.scaleRatioY()*2,
             x: this.px(),
-            y: this.py()
+            y: this.py()+100*this.scaleRatioY()
         });
 
         AudioPlayer.playSleepEffect(animationDuration - 0.2);
