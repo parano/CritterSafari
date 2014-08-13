@@ -11,7 +11,8 @@ var BackgroundLayer = cc.Layer.extend({
         this.init();
     },
 
-    init:function () {
+    init: function () {
+        var that;
         this._super();
         this.s = cc.director.getWinSize();
 
@@ -31,7 +32,32 @@ var BackgroundLayer = cc.Layer.extend({
 
         this.spriteBG.setPosition(centerPos);
         this.addChild(this.spriteBG);
+
+        that = this;
+        if ('keyboard' in cc.sys.capabilities) {
+            cc.eventManager.addListener({
+                event: cc.EventListener.KEYBOARD,
+                onKeyPressed: function (key) {
+                    cc.log("Key down:" + key);
+                },
+                onKeyReleased: function (key) {
+                    cc.log("Key up:" + key);
+                    if(key === 50) {
+                        that.toggleController();
+                    }
+                }
+            }, this);
+        }
     },
+
+    toggleController: function() {
+        if(+Config.ls.getItem('controller') === 1) {
+            Config.ls.setItem('controller', 2);
+        } else {
+            Config.ls.setItem('controller', 1);
+        }
+    },
+
 
     scaleRatioX: function() {
         return this.s.width  / Constants.bg.width;

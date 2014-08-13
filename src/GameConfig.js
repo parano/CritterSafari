@@ -27,6 +27,7 @@ var Config = {
     default_bg: "forest",
     default_princess_id_1: 0,
     default_princess_id_2: 1,
+    default_controller_id: 1,
 
 
     init: function() {
@@ -34,6 +35,7 @@ var Config = {
         this.ls.setItem('bg', this.default_bg);
         this.ls.setItem('princess1', this.default_princess_id_1);
         this.ls.setItem('princess2', this.default_princess_id_2);
+        this.ls.setItem('controller', this.default_controller_id);
     }
 }
 

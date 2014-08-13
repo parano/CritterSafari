@@ -21,7 +21,7 @@ var AnimationLayer = cc.Layer.extend({
         this._super();
 
         this.character_id = character_id;
-        var color_id = Config.ls.getItem('princess1');
+        var color_id = Config.ls.getItem('princess' + character_id);
         this.color = this.colors[color_id];
         this.starting_row = starting_row;
         this.starting_col = starting_col;
@@ -41,54 +41,62 @@ var AnimationLayer = cc.Layer.extend({
                 },
                 onKeyReleased: function (key, event) {
                     //cc.log("Key up:" + key);
-                    switch(key){
-                        // move princess
-                        case 37: // press left arrow
-                            that.move('left');
-                            break;
-                        case 38: //press up arrow
-                            that.move('up');
-                            break;
-                        case 39: // press right arrow
-                            that.move('right');
-                            break;
-                        case 40: // press down arrow
-                            that.move('down');
-                            break;
-                        case 32: // press space
-                            that.move('reset');
-                            that.resetStyle(0.1);
-                            break;
+                    if(+Config.ls.getItem('controller') === that.character_id) {
+                        cc.log(Config.ls.getItem('controller'));
+                        cc.log(that.character_id);
+                        switch (key) {
+                            // move princess
+                            case 37: // press left arrow
+                                that.move('left');
+                                break;
+                            case 38: //press up arrow
+                                that.move('up');
+                                break;
+                            case 39: // press right arrow
+                                that.move('right');
+                                break;
+                            case 40: // press down arrow
+                                that.move('down');
+                                break;
+                            //case 32: // press space
+                            //    that.move('reset');
+                            //    that.resetStyle(0.1);
+                            //    break;
 
-                        // change background
-                        case 67: // press c
-                            that.changeBg();
-                            break;
+                            // change background
+                            case 67: // press c
+                                that.changeBg();
+                                break;
 
-                        // change princess
-                        case 81: // press q
-                            that.nextColor();
-                            break;
+                            // change princess
+                            case 81: // press q
+                                that.nextColor();
+                                break;
 
-                        // actions:
-                        case 68: // press d
-                            that.actionDancing();
-                            break;
-                        case 83: // press s
-                            that.actionSleep();
-                            break;
-                        case 85: // press u
-                            that.actionDressUp();
-                            break;
-                        case 77: // press m
-                            that.actionMagic()
-                            break;
-                        case 76: // press l
-                            that.actionLove();
-                            break;
-                        case 84: // press t
-                            that.actionTantrum();
-                            break;
+                            // actions:
+                            case 68: // press d
+                                that.actionDancing();
+                                break;
+                            case 83: // press s
+                                that.actionSleep();
+                                break;
+                            case 85: // press u
+                                that.actionDressUp();
+                                break;
+                            case 77: // press m
+                                that.actionMagic()
+                                break;
+                            case 76: // press l
+                                that.actionLove();
+                                break;
+                            case 84: // press t
+                                that.actionTantrum();
+                                break;
+
+//                            case 50: // press 2, change controller
+//                                that.toggleController();
+//                                break;
+                        }
                     }
                 }
             }, this);
@@ -96,6 +104,16 @@ var AnimationLayer = cc.Layer.extend({
             cc.log("KEYBOARD Not supported");
         }
     },
+//
+//    toggleController: function() {
+//        if(+Config.ls.getItem('controller') === 1) {
+//            cc.log("change to 2");
+//            Config.ls.setItem('controller', 2);
+//        } else {
+//            cc.log("change to 1");
+//            Config.ls.setItem('controller', 1);
+//        }
+//    },
 
     initSprite: function() {
         // create sprite sheet
@@ -236,7 +254,7 @@ var AnimationLayer = cc.Layer.extend({
         this.updatePosition(1);
     },
 
-    actionDancing: function (Sequence) {
+    actionDancing: function () {
         cc.log("Dancing Playing!!!");
 
         //blink
@@ -470,7 +488,7 @@ var AnimationLayer = cc.Layer.extend({
     },
 
     nextColor: function() {
-        var color_id = Config.ls.getItem('princess1');
+        var color_id = Config.ls.getItem('princess'+this.character_id);
         color_id = (++color_id)%3; // next id
         Config.ls.setItem('princess'+this.character_id, color_id);
         //this.color = this.colors[color_id];
