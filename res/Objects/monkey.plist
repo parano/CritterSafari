@@ -1720,7 +1720,7 @@
                 <key>sourceSize</key>
                 <string>{50,50}</string>
             </dict>
-            <key>M_Tanturm-1 (dragged).tiff</key>
+            <key>M_Tantrum-1 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,2},{50,50}}</string>
@@ -1733,7 +1733,7 @@
                 <key>sourceSize</key>
                 <string>{50,50}</string>
             </dict>
-            <key>M_Tanturm-2 (dragged).tiff</key>
+            <key>M_Tantrum-2 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,54},{50,50}}</string>
@@ -1746,7 +1746,7 @@
                 <key>sourceSize</key>
                 <string>{50,50}</string>
             </dict>
-            <key>M_Tanturm-3 (dragged).tiff</key>
+            <key>M_Tantrum-3 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,106},{50,50}}</string>
@@ -1759,7 +1759,7 @@
                 <key>sourceSize</key>
                 <string>{50,50}</string>
             </dict>
-            <key>M_Tanturm-4 (dragged).tiff</key>
+            <key>M_Tantrum-4 (dragged).tiff</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,158},{50,50}}</string>
@@ -1782,7 +1782,7 @@
             <key>size</key>
             <string>{102,2040}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:bdc701f65e9eb64024908af1fcf8027b:e7a9341585736ef39c580173bb80e936:981299b9bed78a124f7eed7a66b6f893$</string>
+            <string>$TexturePacker:SmartUpdate:4ed493b53a8c12f9be0b2cd7766e1144:e7a9341585736ef39c580173bb80e936:981299b9bed78a124f7eed7a66b6f893$</string>
             <key>textureFileName</key>
             <string>monkey.png</string>
         </dict>

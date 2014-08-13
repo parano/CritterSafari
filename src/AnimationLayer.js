@@ -71,21 +71,27 @@ var AnimationLayer = cc.Layer.extend({
 
                             // actions:
                             case 68: // press d
+                                that.dispatchActionEvent('dancing');
                                 that.actionDancing();
                                 break;
                             case 83: // press s
+                                that.dispatchActionEvent('sleeping');
                                 that.actionSleep();
                                 break;
                             case 85: // press u
+                                that.dispatchActionEvent('dressup');
                                 that.actionDressUp();
                                 break;
                             case 77: // press m
+                                that.dispatchActionEvent('magic');
                                 that.actionMagic()
                                 break;
                             case 76: // press l
+                                that.dispatchActionEvent('love');
                                 that.actionLove();
                                 break;
                             case 84: // press t
+                                that.dispatchActionEvent('tantrum');
                                 that.actionTantrum();
                                 break;
                         }
@@ -486,5 +492,16 @@ var AnimationLayer = cc.Layer.extend({
         Config.ls.setItem('princess'+this.character_id, color_id);
         //this.color = this.colors[color_id];
         cc.game.run();
+    },
+
+    dispatchActionEvent: function(action) {
+        var event = new cc.EventCustom("action");
+        event.setUserData({
+            row: this.row,
+            col: this.col,
+            action: action
+        });
+        cc.eventManager.dispatchEvent(event);
     }
+
 });
