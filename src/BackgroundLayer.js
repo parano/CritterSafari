@@ -43,8 +43,17 @@ var BackgroundLayer = cc.Layer.extend({
                 onKeyReleased: function (key) {
                     //cc.log("Key up:" + key);
                     switch(key) {
-                        case 50: // press 2
-                            that.toggleController();
+                        case 49:
+                            that.parent.playerA.toggleVisibility();
+                            break;
+                        case 50:
+                            that.parent.playerB.toggleVisibility();
+                            break;
+                        case 51: // press 3
+                            that.setController(1);
+                            break;
+                        case 52: //press4
+                            that.setController(2);
                             break;
                         case 32: // press
                             that.resetBoard();
@@ -61,6 +70,10 @@ var BackgroundLayer = cc.Layer.extend({
         } else {
             Config.ls.setItem('controller', 1);
         }
+    },
+
+    setController: function(controller_id) {
+        Config.ls.setItem('controller', controller_id);
     },
 
     resetBoard: function() {

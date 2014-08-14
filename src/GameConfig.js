@@ -28,10 +28,16 @@ var Constants = {
     sleepFramesLen: [5, 20, 45, 18],
     tantrumFramesLen: [16, 4, 22, 19],
 
-    objects_initial_location: [
-        {row:0, col:0}, {row:4, col:4},
-        {row:2, col:1}, {row:2, col:3}
-    ]
+    objects_initial_location: {
+        forest:[
+            {row:0, col:0}, {row:4, col:4},
+            {row:2, col:1}, {row:2, col:3}
+        ],
+        space: [
+            {row:1, col:0}, {row:0, col:2},
+            {row:3, col:4}, {row:4, col:3}
+        ]
+    }
 };
 
 var Config = {
@@ -48,6 +54,12 @@ var Config = {
         this.ls.setItem('princess1', this.default_princess_id_1);
         this.ls.setItem('princess2', this.default_princess_id_2);
         this.ls.setItem('controller', this.default_controller_id);
+        this.ls.setItem('player1Vis', false);
+        this.ls.setItem('player2Vis', false);
+        this.ls.setItem('foxVis', false);
+        this.ls.setItem('monkeyVis', false);
+        this.ls.setItem('pigVis', false);
+        this.ls.setItem('rabbitVis', false);
     }
 }
 

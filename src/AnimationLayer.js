@@ -66,7 +66,13 @@ var AnimationLayer = cc.Layer.extend({
 
                             // change princess
                             case 81: // press q
-                                that.nextColor();
+                                that.setColor(0);
+                                break;
+                            case 87:
+                                that.setColor(1);
+                                break;
+                            case 69:
+                                that.setColor(2);
                                 break;
 
                             // actions:
@@ -136,7 +142,8 @@ var AnimationLayer = cc.Layer.extend({
             //scaleX: this.scaleRatioX(),
             //scaleY: this.scaleRatioY(),
             x: this.px(),
-            y: this.py()
+            y: this.py(),
+            visible: Config.ls.getItem(Config.ls.getItem('player'+ this.character_id +'Viz'))
         });
         this.sprite.setScaleY(this.scaleRatioY());
         this.sprite.setScaleX(this.scaleRatioX());
@@ -174,6 +181,12 @@ var AnimationLayer = cc.Layer.extend({
 
     scaleRatioY: function() {
         return this.s.height / Constants.bg.height;
+    },
+
+    toggleVisibility: function() {
+        var visible = this.sprite.visible;
+        Config.ls.setItem('player' + this.character_id + 'Viz', !visible);
+        this.sprite.visible = !visible;
     },
 
     updatePosition: function(duration) {
@@ -470,6 +483,38 @@ var AnimationLayer = cc.Layer.extend({
     actionDressUp: function() {
         cc.log("dress up");
         var animationDuration = 4;
+        var fps = 10;
+        var that = this;
+        this.sprite.stopAllActions();
+
+
+        var animationFrames = [];
+        animationFrames.push(cc.spriteFrameCache.getSpriteFrame(this.color + "_front_1.png"));
+        animationFrames.push(cc.spriteFrameCache.getSpriteFrame(this.color + "_front_2.png"));
+        animationFrames.push(cc.spriteFrameCache.getSpriteFrame(this.color + "_left.png"));
+        animationFrames.push(cc.spriteFrameCache.getSpriteFrame(this.color + "_back.png"));
+        animationFrames.push(cc.spriteFrameCache.getSpriteFrame(this.color + "_right.png"));
+        this.sprite.runAction(
+            cc.Animate.create(
+                cc.Animation.create(animationFrames, 1/fps)
+            ).repeat(fps/5*animationDuration)
+        );
+
+        var emit = function() {
+            var emitter = cc.ParticleSystem.create(res.dressup_plist);
+            that.emitters.push(emitter);
+            that.addChild(emitter, 10);
+            emitter.attr({
+                scaleX: that.scaleRatioX(),
+                scaleY: that.scaleRatioY(),
+                x: that.px(),
+                y: that.py() - 50 * that.scaleRatioY()
+            });
+        }
+
+        for(var i=0; i<5; i++) {
+            setTimeout(emit, i*animationDuration/5*1000);
+        }
 
         AudioPlayer.playDressUpEffect(animationDuration - 0.2);
         this.resetStyle(animationDuration);
@@ -486,11 +531,8 @@ var AnimationLayer = cc.Layer.extend({
         cc.game.run();
     },
 
-    nextColor: function() {
-        var color_id = Config.ls.getItem('princess'+this.character_id);
-        color_id = (++color_id)%3; // next id
+    setColor: function(color_id) {
         Config.ls.setItem('princess'+this.character_id, color_id);
-        //this.color = this.colors[color_id];
         cc.game.run();
     },
 

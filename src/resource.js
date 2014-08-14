@@ -8,11 +8,11 @@ var res = {
     music_test_mp3      : "res/Sound/character_dancing.mp3",
 
     dancing_mp3         : "res/Sound/character_dancing.mp3",
-    sleeping_mp3        : "res/Sound/character_sleep.mp3",
+    sleeping_mp3        : "res/Sound/character_sleep.wav",
     magic_mp3           : "res/Sound/character_magic.mp3",
-    dressup_mp3         : "res/Sound/character_dressup.mp3",
-    love_mp3            : "res/Sound/character_love.mp3",
-    tantrum_mp3         : "res/Sound/character_dancing.mp3",
+    dressup_mp3         : "res/Sound/character_dressup.wav",
+    love_mp3            : "res/Sound/character_love.wav",
+    tantrum_mp3         : "res/Sound/character_tantrum.mp4",
 
     phoenix_plist       : "res/Particles/Phoenix.plist",
     fire_png            : "res/Particles/fire.png",
@@ -22,6 +22,7 @@ var res = {
     pig_sprite_png      : "res/pig.png",
     monkey_sprite_png   : "res/monkey.png",
     rabbit_sprite_png   : "res/rabbit.png",
+    dressup_plist       : "res/Particles/dressup.plist",
 
 
     //objects
@@ -48,6 +49,7 @@ var g_resources = [
     res.princess_plist,
     res.phoenix_plist,
     res.sleeping_plist,
+    res.dressup_plist,
 
     //Audios
     res.effect_test_mp3,

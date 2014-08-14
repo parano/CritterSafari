@@ -30,15 +30,15 @@ var ObjectsLayer = cc.Layer.extend({
     initSprites: function(index) {
         this.sprites[index] = cc.Sprite.create(this.sprites_default_images[index]);
         this.addChild(this.sprites[index], index);
-        var row = Constants.objects_initial_location[index].row;
-        var col = Constants.objects_initial_location[index].col;
+        var row = Constants.objects_initial_location[Config.ls.getItem('bg')][index].row;
+        var col = Constants.objects_initial_location[Config.ls.getItem('bg')][index].col;
         this.sprites[index].attr({
             scaleX: 1.7*this.scaleRatioX(),
             scaleY: 1.7*this.scaleRatioY(),
             x: this.px(row, col),
             y: this.py(row, col)
         });
-        this.sprites[index].visible = false;
+        this.sprites[index].visible = Config.ls.getItem(this.object_names[index]+'Viz');
     },
 
 
@@ -111,28 +111,28 @@ var ObjectsLayer = cc.Layer.extend({
                 onKeyReleased: function (key) {
                     cc.log("Key up:" + key);
                     switch(key) {
-                        case 55: // press 7
+                        case 54: // press 6
                             that.toggleVisibility(0);
                             break;
-                        case 56: // press 8
+                        case 55: // press 7
                             that.toggleVisibility(1);
                             break;
-                        case 57: // press 9
+                        case 56: // press 8
                             that.toggleVisibility(2);
                             break;
-                        case 48: // press 0
+                        case 57: // press 9
                             that.toggleVisibility(3);
                             break;
                     }
                 }
             }, this);
         }
-
         this.setActionListeners();
     },
 
     toggleVisibility: function(index) {
         var visible = this.sprites[index].visible;
+        Config.ls.setItem(this.object_names[index] + 'Viz', !visible);
         this.sprites[index].visible = !visible;
     },
 
@@ -165,8 +165,8 @@ var ObjectsLayer = cc.Layer.extend({
                 var action = event.getUserData().action;
 
                 for(var i=0; i<4; i++) {
-                    object_row = Constants.objects_initial_location[i].row;
-                    object_col = Constants.objects_initial_location[i].col;
+                    object_row = Constants.objects_initial_location[Config.ls.getItem('bg')][i].row;
+                    object_col = Constants.objects_initial_location[Config.ls.getItem('bg')][i].col;
                     if(that.nearby(event_row, event_col, object_row, object_col)){
                         switch(action)  {
                             case 'dancing':

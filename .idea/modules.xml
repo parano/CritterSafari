@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/CocosJSGame.iml" filepath="$PROJECT_DIR$/.idea/CocosJSGame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/SequenceCreatures.iml" filepath="$PROJECT_DIR$/.idea/SequenceCreatures.iml" />
     </modules>
   </component>
 </project>
