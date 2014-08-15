@@ -1,0 +1,7 @@
+.DS_Store
+.idea/
+publish/
+runtime/
+fileinfo_debug.json
+frameworks/
+.settings
