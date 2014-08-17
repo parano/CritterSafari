@@ -2,19 +2,15 @@ var express = require('express');
 var GameboardReader = require('./GameboardReader');
 var ReadingQueue = require('./ReadingQueue');
 
-var commandQueue = new ReadingQueue('command');
-//var settingQueue = new ReadingQueue('setting');
-console.log(commandQueue);
+var commandQueue = new ReadingQueue();
+
+//console.log(commandQueue);
 
 var instructionBoard = new GameboardReader("/dev/cu.usbmodem1421", 9600, function(data){
   //console.log("data received: " + data);
   commandQueue.push(data);
 });
 
-//var settingBoard = new GameboardReader("/dev/cu.usbmodem1411", 9600, function(data){
-//  console.log("data received: " + data);
-//  settingQueue.push(data);
-//});
 
 var app = express();
 

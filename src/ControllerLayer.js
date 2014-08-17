@@ -15,7 +15,7 @@ var ControllerLayer = cc.Layer.extend({
         var that = this;
         this._super();
 
-        var winSize = cc.director.getWinSize();
+        //var winSize = cc.director.getWinSize();
 
         //this.xhrStatusLabel = cc.LabelTTF.create("#", "Helvetica", 20);
         //this.xhrStatusLabel.setColor(cc.color(0,0,0));//black color
