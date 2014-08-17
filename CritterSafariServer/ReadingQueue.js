@@ -3,18 +3,18 @@ var _ = require('underscore');
 var validCommandPrefixs = [
   'hide character',
   'show character',
-  'start',
-  'up',
-  'down',
-  'left',
-  'right',
-  'dance',
-  'love',
-  'tantrum',
-  'magic',
-  'function',
-  'dressup',
-  'sleep'
+  'start' //,
+  //'up',
+  //'down',
+  //'left',
+  //'right',
+  //'dance',
+  //'love',
+  //'tantrum',
+  //'magic',
+  //'function',
+  //'dressup',
+  //'sleep'
 ];
 
 var validSettingPrefixs = [
@@ -38,6 +38,10 @@ var ReadingQueue = function(queueType){
 }
 
 ReadingQueue.prototype.isValidCommand = function(data) {
+  if(typeof(data) !== 'string' && data.length > 0) {
+    return false;
+  }
+
   // have valid prefix or is an integer
   return _.find(this.validPrefixs, function(prefix){
     return data.indexOf(prefix) !== -1;
@@ -45,14 +49,12 @@ ReadingQueue.prototype.isValidCommand = function(data) {
 }
 
 ReadingQueue.prototype.next = function() {
-  while(!this.isValidCommand(this.queue[0])){
-    this.queue.shift();
-  }
   return this.queue.shift();
 }
 
 ReadingQueue.prototype.push = function(data) {
-  if(typeof data === 'string' && data.length > 0) {
+  if(this.isValidCommand(data)) {
+    console.log('pusing data to queue: ' + data);
     this.queue.push(data);
   }
 }
