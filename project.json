@@ -18,6 +18,7 @@
         "src/StatusLayer.js",
         "src/GameConfig.js",
         "src/AudioPlayer.js",
-        "src/ObjectsLayer.js"
+        "src/ObjectsLayer.js",
+        "src/ControllerLayer.js"
     ]
 }

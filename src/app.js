@@ -15,6 +15,7 @@ var GameScene = cc.Scene.extend({
         this.addChild(this.playerB); // second player
         this.addChild(new StatusLayer());
         this.addChild(new ObjectsLayer());
+        this.addChild(new ControllerLayer());
     }
 });
 
