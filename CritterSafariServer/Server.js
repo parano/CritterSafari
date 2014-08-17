@@ -5,6 +5,13 @@ var _ = require('underscore');
 var commandQueue = [];
 var settingQueue = [];
 
+var isValidCommand = function(prefixs, data) {
+  // have valid prefix or is an integer
+  return _.find(prefixs, function(prefix){
+    return data.indexOf(prefix) !== -1;
+  }) !== undefined || !isNaN(+data);
+};
+
 var validCommandPrefixs = [
   'hide character',
   'show character',
@@ -21,22 +28,27 @@ var validCommandPrefixs = [
   'dressup',
   'sleep'
 ];
-var isValidCommandPrefixs = function(data) {
-  return _.find(validCommandPrefixs, function(prefix){
-    return data.indexOf(prefix) !== -1;
-  }) !== undefined || !isNaN(+data);
-};
+
+var validSettingPrefixs = [
+  'set bg',
+  'add object',
+  'remove object'
+];
+
 var commandQueueNext = function() {
-  while(!isValidCommandPrefixs(commandQueue[0])){
+  while(!isValidCommand(validCommandPrefixs, commandQueue[0])){
     commandQueue.shift();
   }
   return commandQueue.shift();
 };
 
-//var settingQueueNext = function(data) {
 
-//};
-
+var settingQueueNext = function() {
+  while(!isValidCommand(validSettingPrefixs, settingQueue[0])){
+    settingQueue.shift();
+  }
+  return settingQueue.shift();
+};
 
 var instructionBoard = new GameboardReader("/dev/cu.usbmodem1421", 9600, function(data){
   console.log("data received: " + data);
@@ -49,7 +61,6 @@ var instructionBoard = new GameboardReader("/dev/cu.usbmodem1421", 9600, functio
 //  console.log("data received: " + data);
 //  settingQueue.push(data);
 //});
-
 
 var app = express();
 

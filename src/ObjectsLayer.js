@@ -205,6 +205,7 @@ var ObjectsLayer = cc.Layer.extend({
         var fps = 10; // 1/s
         var duration = 4; //s
 
+        this.sprites[index].stopAllActions();
         this.sprites[index].attr({
             scaleX: 4* this.scaleRatioX(),
             scaleY: 4* this.scaleRatioY()
@@ -222,6 +223,7 @@ var ObjectsLayer = cc.Layer.extend({
         var fps = 10; // 1/s
         var duration = 4; //s
 
+        this.sprites[index].stopAllActions();
         this.sprites[index].attr({
             scaleX: 4* this.scaleRatioX(),
             scaleY: 4* this.scaleRatioY()
@@ -239,6 +241,7 @@ var ObjectsLayer = cc.Layer.extend({
         var fps = 10; // 1/s
         var duration = 4; //s
 
+        this.sprites[index].stopAllActions();
         this.sprites[index].attr({
             scaleX: 4* this.scaleRatioX(),
             scaleY: 4* this.scaleRatioY()
@@ -256,6 +259,7 @@ var ObjectsLayer = cc.Layer.extend({
         var fps = 10; // 1/s
         var duration = 4; //s
 
+        this.sprites[index].stopAllActions();
         this.sprites[index].attr({
             scaleX: 4* this.scaleRatioX(),
             scaleY: 4* this.scaleRatioY()
@@ -273,6 +277,7 @@ var ObjectsLayer = cc.Layer.extend({
         var fps = 10; // 1/s
         var duration = 4; //s
 
+        this.sprites[index].stopAllActions();
         this.sprites[index].attr({
             scaleX: 4* this.scaleRatioX(),
             scaleY: 4* this.scaleRatioY()
@@ -290,6 +295,7 @@ var ObjectsLayer = cc.Layer.extend({
         var fps = 10; // 1/s
         var duration = 4; //s
 
+        this.sprites[index].stopAllActions();
         this.sprites[index].attr({
             scaleX: 4* this.scaleRatioX(),
             scaleY: 4* this.scaleRatioY()
@@ -307,7 +313,7 @@ var ObjectsLayer = cc.Layer.extend({
         var that = this;
         setTimeout(function() {
             that.resetSprite(index);
-                //that.sprites_default_images[index]);
+              //that.sprites_default_images[index]);
 //            that.sprites[index].setDisplayFrame(
 //                that.sprites_default_images[index]
 //            )
