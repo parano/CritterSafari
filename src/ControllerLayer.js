@@ -3,6 +3,7 @@
  */
 
 var ControllerLayer = cc.Layer.extend({
+    //StatusLabel for debugging only
     //xhrStatusLabel: null,
 
     ctor:function () {
