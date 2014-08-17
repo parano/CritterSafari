@@ -5,4 +5,4 @@ runtime/
 fileinfo_debug.json
 frameworks/
 .settings
-./CritterSafariServer/node_modules/
+CritterSafariServer/node_modules/
