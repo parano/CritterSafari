@@ -1,0 +1,10 @@
+{
+    "name": "CritterSafari-Server",
+    "description": "CritterSafari, an educational game that teaches basic programming concepts to 6-9 years old girls. This application is used for bridging the physical game board to the game running on ipad. The game board uses arduino to send sensor data through serial port, and this app will process the data and serve it throught a web service",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "express": "3.x",
+        "serialport": "1.4.5"
+    }
+}
