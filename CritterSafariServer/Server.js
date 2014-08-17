@@ -1,12 +1,16 @@
 var express = require('express');
 var GameboardReader = require('./GameboardReader');
+var _ = require('underscore');
+
+var commandQueue = [];
+var CommandList = []
+
 
 var gbr = new GameboardReader("/dev/cu.usbmodem1411", 9600, function(data){
   console.log("data received: " + data);
 });
 
 var app = express();
-
 var response_json = {test: true};
 
 app.get('/test.json', function(req, res){

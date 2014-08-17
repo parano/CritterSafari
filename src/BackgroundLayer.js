@@ -81,7 +81,6 @@ var BackgroundLayer = cc.Layer.extend({
         cc.eventManager.dispatchEvent(event);
     },
 
-
     scaleRatioX: function() {
         return this.s.width  / Constants.bg.width;
     },
