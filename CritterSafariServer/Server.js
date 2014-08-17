@@ -10,7 +10,7 @@ var gbr = new GameboardReader("/dev/cu.usbmodem1411", 9600, function(data){
 
 var app = express();
 
-app.get('/test.json', function(req, res){
+app.get('/instruction.json', function(req, res){
   res.setHeader("Access-Control-Allow-Origin", "*");
 
   if(commandQueue.length === 0) {
