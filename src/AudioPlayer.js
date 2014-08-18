@@ -49,8 +49,11 @@ var AudioPlayer = {
     playDressUpEffect: function(delay){
         this.audioEngine.playMusic(res.dressup_mp3, false);
         this.stopMusicAfter(delay);
-    }
+    },
 
+    stopAllMusic: function(){
+        this.audioEngine.stopAllMusic();
+    }
 };
 
 AudioPlayer.init();

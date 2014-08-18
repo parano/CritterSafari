@@ -74,8 +74,7 @@ var BackgroundLayer = cc.Layer.extend({
                 var data = event.getUserData();
                 if(data.target === 'reset') {
                     Config.ls.setItem('controller', 1);
-                    that.parent.playerA.resetSprite();
-                    that.parent.playerB.resetSprite();
+                    that.parent.resetAll();
                 } else if (data.target === 'board') {
                     that.setBg(data.bg);
                 } else if (data.target === 'controller') {

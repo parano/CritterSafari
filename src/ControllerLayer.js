@@ -19,17 +19,11 @@ var ControllerLayer = cc.Layer.extend({
         this._super();
         this.keyboardEventListener();
 
-        //var winSize = cc.director.getWinSize();
-
-        //this.xhrStatusLabel = cc.LabelTTF.create("#", "Helvetica", 20);
-        //this.xhrStatusLabel.setColor(cc.color(0,0,0));//black color
-        //this.xhrStatusLabel.setPosition(cc.p(70, winSize.height - 20));
-        //this.addChild(this.xhrStatusLabel);
-
 //        setInterval(function(){
 //            that.sendGetRequest();
 //        }, 200);
     },
+
 
     keyboardEventListener: function(){
         var that = this;
@@ -138,12 +132,12 @@ var ControllerLayer = cc.Layer.extend({
                             break;
 
                         // change princess color
-                        case 8+Config.ls.getItem('controller'): // press q, color pink
+                        case 81: // press q, color pink
                             event = new cc.EventCustom('updateCharacter');
                             event.setUserData({
                                 player_id: +Config.ls.getItem('controller'),
                                 event: 'color',
-                                data: 0 // pink
+                                value: 0 // pink
                             });
                             cc.eventManager.dispatchEvent(event);
                             break;
@@ -152,17 +146,16 @@ var ControllerLayer = cc.Layer.extend({
                             event.setUserData({
                                 player_id: +Config.ls.getItem('controller'),
                                 event: 'color',
-                                data: 1 // green
+                                value: 1 // green
                             });
                             cc.eventManager.dispatchEvent(event);
                             break;
                         case 69: // press e, color blue
                             event = new cc.EventCustom('updateCharacter');
                             event.setUserData({
-                                target: 'player',
                                 player_id: +Config.ls.getItem('controller'),
                                 event: 'color',
-                                data: 2 // blue
+                                value: 2 // blue
                             });
                             cc.eventManager.dispatchEvent(event);
                             break;
@@ -216,6 +209,39 @@ var ControllerLayer = cc.Layer.extend({
                             });
                             cc.eventManager.dispatchEvent(event);
                             break;
+
+                        case 54: // press 6
+                            event = new cc.EventCustom('objects');
+                            event.setUserData({
+                               targetObject: 0,
+                               visible: true
+                            });
+                            cc.eventManager.dispatchEvent(event);
+                            break;
+                        case 55: // press 7
+                            event = new cc.EventCustom('objects');
+                            event.setUserData({
+                                targetObject: 1,
+                                visible: true
+                            });
+                            cc.eventManager.dispatchEvent(event);
+                            break;
+                        case 56: // press 8
+                            event = new cc.EventCustom('objects');
+                            event.setUserData({
+                                targetObject: 2,
+                                visible: true
+                            });
+                            cc.eventManager.dispatchEvent(event);
+                            break;
+                        case 57: // press 9
+                            event = new cc.EventCustom('objects');
+                            event.setUserData({
+                                targetObject: 3,
+                                visible: true
+                            });
+                            cc.eventManager.dispatchEvent(event);
+                            break;
                     }
                 }
             }, this);
@@ -248,4 +274,6 @@ var ControllerLayer = cc.Layer.extend({
 
         xhr.send();
     }
+
+
 });

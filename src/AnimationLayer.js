@@ -596,7 +596,7 @@ var AnimationLayer = cc.Layer.extend({
 
     setColor: function(color_id) {
         Config.ls.setItem('princess'+this.character_id, color_id);
-        cc.game.run();
+        this.parent.resetAll();
     },
 
     dispatchActionEvent: function(action) {

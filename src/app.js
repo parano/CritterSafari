@@ -5,6 +5,8 @@ var GameScene = cc.Scene.extend({
     playerA: null,
     playerB: null,
     bg: null,
+    objLayer: null,
+
     onEnter:function () {
         this._super();
         //add three layer in the right order
@@ -15,8 +17,11 @@ var GameScene = cc.Scene.extend({
         this.playerB = new AnimationLayer(2, 0, 4);
         this.addChild(this.playerA);
         this.addChild(this.playerB); // second player
+
         this.addChild(new StatusLayer());
-        this.addChild(new ObjectsLayer());
+
+        this.objLayer =new ObjectsLayer();
+        this.addChild(this.objLayer);
         this.addChild(new ControllerLayer());
     },
 
@@ -31,8 +36,10 @@ var GameScene = cc.Scene.extend({
         this.playerB.removeChild(this.playerB.sprite, true);
         this.playerA.init();
         this.playerB.init();
-        //this.playerA = new AnimationLayer(1, 4, 0); // character id, starting row, starting col
-        //this.playerB = new AnimationLayer(2, 0, 4);
+
+        this.objLayer.hideAllSprites();
+        this.objLayer.init();
+
     }
 });
 
