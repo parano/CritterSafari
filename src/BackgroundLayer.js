@@ -9,10 +9,10 @@ var BackgroundLayer = cc.Layer.extend({
     ctor:function () {
         this._super();
         this.init();
+        this.setListeners();
     },
 
     init: function () {
-        var that;
         this._super();
         this.s = cc.director.getWinSize();
 
@@ -33,35 +33,57 @@ var BackgroundLayer = cc.Layer.extend({
         this.spriteBG.setPosition(centerPos);
         this.addChild(this.spriteBG);
 
-        that = this;
-        if ('keyboard' in cc.sys.capabilities) {
-            cc.eventManager.addListener({
-                event: cc.EventListener.KEYBOARD,
-                onKeyPressed: function (key) {
-                    //cc.log("Key down:" + key);
-                },
-                onKeyReleased: function (key) {
-                    //cc.log("Key up:" + key);
-                    switch(key) {
-                        case 49:
-                            that.parent.playerA.toggleVisibility();
-                            break;
-                        case 50:
-                            that.parent.playerB.toggleVisibility();
-                            break;
-                        case 51: // press 3
-                            that.setController(1);
-                            break;
-                        case 52: //press4
-                            that.setController(2);
-                            break;
-                        case 32: // press
-                            that.resetBoard();
-                            break;
-                    }
+//        if ('keyboard' in cc.sys.capabilities) {
+//            cc.eventManager.addListener({
+//                event: cc.EventListener.KEYBOARD,
+//                onKeyPressed: function (key) {
+//                    //cc.log("Key down:" + key);
+//                },
+//                onKeyReleased: function (key) {
+//                    //cc.log("Key up:" + key);
+//                    switch(key) {
+//                        case 49:
+//                            that.parent.playerA.toggleVisibility();
+//                            break;
+//                        case 50:
+//                            that.parent.playerB.toggleVisibility();
+//                            break;
+//                        case 51: // press 3
+//                            that.setController(1);
+//                            break;
+//                        case 52: //press4
+//                            that.setController(2);
+//                            break;
+//                        case 32: // press
+//                            that.resetBoard();
+//                            break;
+//                    }
+//                }
+//            }, this);
+//        }
+
+    },
+
+    setListeners: function(){
+        var that = this;
+        this.eventListener = cc.EventListener.create({
+            event: cc.EventListener.CUSTOM,
+            eventName: 'changeSetting',
+            callback: function(event){
+                console.log('change setting event received');
+                var data = event.getUserData();
+                if(data.target === 'reset') {
+                    Config.ls.setItem('controller', 1);
+                    that.parent.playerA.resetSprite();
+                    that.parent.playerB.resetSprite();
+                } else if (data.target === 'board') {
+                    that.setBg(data.bg);
+                } else if (data.target === 'controller') {
+                    that.setController(data.id);
                 }
-            }, this);
-        }
+            }
+        });
+        cc.eventManager.addListener(this.eventListener, 1);
     },
 
     toggleController: function() {
@@ -79,6 +101,19 @@ var BackgroundLayer = cc.Layer.extend({
     resetBoard: function() {
         var event = new cc.EventCustom("board_reset");
         cc.eventManager.dispatchEvent(event);
+    },
+
+    setBg: function (bg) {
+        // background setting stores in local storage
+        // implemented in GameConfig.js
+        if(bg === 'space') {
+            Config.ls.setItem('bg', 'space');
+        } else if(bg === 'forest') {
+            Config.ls.setItem('bg', 'forest');
+        }
+        this.spriteBG.removeFromParent(true);
+        //this.init();
+        this.parent.resetAll();
     },
 
     scaleRatioX: function() {

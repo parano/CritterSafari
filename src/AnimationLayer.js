@@ -21,102 +21,161 @@ var AnimationLayer = cc.Layer.extend({
         this._super();
 
         this.character_id = character_id;
-        var color_id = Config.ls.getItem('princess' + character_id);
-        this.color = this.colors[color_id];
         this.starting_row = starting_row;
         this.starting_col = starting_col;
-        this.row = starting_row;
-        this.col = starting_col;
 
         this.init();
+        this.initListeners();
     },
 
-    initController: function () {
+    initListeners: function () {
         var that = this;
-        if ('keyboard' in cc.sys.capabilities) {
-            cc.eventManager.addListener({
-                event: cc.EventListener.KEYBOARD,
-                onKeyPressed: function (key, event) {
-                    //("Key down:" + key);
-                },
-                onKeyReleased: function (key, event) {
-                    //cc.log("Key up:" + key);
-                    if(+Config.ls.getItem('controller') === that.character_id) {
-//                        cc.log(Config.ls.getItem('controller'));
-//                        cc.log(that.character_id);
-                        switch (key) {
-                            // move princess
-                            case 37: // press left arrow
-                                that.move('left');
-                                break;
-                            case 38: //press up arrow
-                                that.move('up');
-                                break;
-                            case 39: // press right arrow
-                                that.move('right');
-                                break;
-                            case 40: // press down arrow
-                                that.move('down');
-                                break;
+        this.updateCharacterListener = cc.EventListener.create({
+            event: cc.EventListener.CUSTOM,
+            eventName: 'updateCharacter',
+            callback: function(event){
+                console.log('update character event received');
+                var data = event.getUserData();
 
-                            // change background
-                            case 67: // press c
-                                that.changeBg();
-                                break;
-
-                            // change princess
-                            case 81: // press q
-                                that.setColor(0);
-                                break;
-                            case 87:
-                                that.setColor(1);
-                                break;
-                            case 69:
-                                that.setColor(2);
-                                break;
-
-                            // actions:
-                            case 68: // press d
-                                that.dispatchActionEvent('dancing');
-                                that.actionDancing();
-                                break;
-                            case 83: // press s
-                                that.dispatchActionEvent('sleeping');
-                                that.actionSleep();
-                                break;
-                            case 85: // press u
-                                that.dispatchActionEvent('dressup');
-                                that.actionDressUp();
-                                break;
-                            case 77: // press m
-                                that.dispatchActionEvent('magic');
-                                that.actionMagic()
-                                break;
-                            case 76: // press l
-                                that.dispatchActionEvent('love');
-                                that.actionLove();
-                                break;
-                            case 84: // press t
-                                that.dispatchActionEvent('tantrum');
-                                that.actionTantrum();
-                                break;
-                        }
+                if(data.player_id === that.character_id) {
+                    if(data.event === 'updateVisibility') {
+                        that.setVisibility(data.value)
+                    } else if(data.event === 'color') {
+                        that.setColor(data.value);
                     }
                 }
-            }, this);
-        } else {
-            cc.log("KEYBOARD Not supported");
-        }
-
-        var resetBoardListener = cc.EventListener.create({
-            event: cc.EventListener.CUSTOM,
-            eventName: "board_reset",
-            callback: function(event) {
-                that.move('reset');
-                that.resetStyle(0.1);
             }
         });
-        cc.eventManager.addListener(resetBoardListener, 1);
+        cc.eventManager.addListener(this.updateCharacterListener, 1);
+
+        this.actionListener = cc.EventListener.create({
+            event: cc.EventListener.CUSTOM,
+            eventName: 'action',
+            callback: function(event){
+                console.log('action event received');
+
+                var data = event.getUserData();
+                var actionType = data.action;
+
+                if(data.player_id === that.character_id) {
+                    if(actionType === 'left') {
+                        console.log('moving left');
+                        that.move('left');
+                    } else if(actionType === 'up') {
+                        that.move('up');
+                    } else if(actionType === 'right') {
+                        that.move('right');
+                    } else if(actionType === 'down') {
+                        that.move('down');
+                    } else if(actionType === 'dance') {
+                        that.dispatchActionEvent('dancing');
+                        that.actionDancing();
+                    } else if(actionType === 'sleeping') {
+                        that.dispatchActionEvent('sleeping');
+                        that.actionSleep();
+                    } else if(actionType === 'dressup') {
+                        that.dispatchActionEvent('dressup');
+                        that.actionDressUp();
+                    } else if(actionType === 'magic') {
+                        that.dispatchActionEvent('magic');
+                        that.actionMagic();
+                    } else if(actionType === 'love') {
+                        that.dispatchActionEvent('love');
+                        that.actionLove();
+                    } else if(actionType === 'tantrum') {
+                        that.dispatchActionEvent('tantrum');
+                        that.actionTantrum();
+                    }
+                }
+            }
+        });
+        cc.eventManager.addListener(this.actionListener, 1);
+
+
+//        if ('keyboard' in cc.sys.capabilities) {
+//            cc.eventManager.addListener({
+//                event: cc.EventListener.KEYBOARD,
+//                onKeyPressed: function (key, event) {
+//                    //("Key down:" + key);
+//                },
+//                onKeyReleased: function (key, event) {
+//                    //cc.log("Key up:" + key);
+//                    if(+Config.ls.getItem('controller') === that.character_id) {
+////                        cc.log(Config.ls.getItem('controller'));
+////                        cc.log(that.character_id);
+//                        switch (key) {
+//                            // move princess
+//                            case 37: // press left arrow
+//                                that.move('left');
+//                                break;
+//                            case 38: //press up arrow
+//                                that.move('up');
+//                                break;
+//                            case 39: // press right arrow
+//                                that.move('right');
+//                                break;
+//                            case 40: // press down arrow
+//                                that.move('down');
+//                                break;
+//
+//                            // change background
+//                            case 67: // press c
+//                                that.changeBg();
+//                                break;
+//
+//                            // change princess
+//                            case 81: // press q
+//                                that.setColor(0);
+//                                break;
+//                            case 87:
+//                                that.setColor(1);
+//                                break;
+//                            case 69:
+//                                that.setColor(2);
+//                                break;
+//
+//                            // actions:
+//                            case 68: // press d
+//                                that.dispatchActionEvent('dancing');
+//                                that.actionDancing();
+//                                break;
+//                            case 83: // press s
+//                                that.dispatchActionEvent('sleeping');
+//                                that.actionSleep();
+//                                break;
+//                            case 85: // press u
+//                                that.dispatchActionEvent('dressup');
+//                                that.actionDressUp();
+//                                break;
+//                            case 77: // press m
+//                                that.dispatchActionEvent('magic');
+//                                that.actionMagic()
+//                                break;
+//                            case 76: // press l
+//                                that.dispatchActionEvent('love');
+//                                that.actionLove();
+//                                break;
+//                            case 84: // press t
+//                                that.dispatchActionEvent('tantrum');
+//                                that.actionTantrum();
+//                                break;
+//                        }
+//                    }
+//                }
+//            }, this);
+//        } else {
+//            cc.log("KEYBOARD Not supported");
+//        }
+
+//        var resetBoardListener = cc.EventListener.create({
+//            event: cc.EventListener.CUSTOM,
+//            eventName: "board_reset",
+//            callback: function(event) {
+//                that.move('reset');
+//                that.resetStyle(0.1);
+//            }
+//        });
+//        cc.eventManager.addListener(resetBoardListener, 1);
 
     },
 
@@ -158,13 +217,19 @@ var AnimationLayer = cc.Layer.extend({
         this.s = cc.director.getWinSize();
         //cc.director.setContentScaleFactor(Constants.bg.width * 1.5 / this.s.width);
 
+
+        var color_id = Config.ls.getItem('princess' + this.character_id);
+        this.color = this.colors[color_id];
+
+        this.row = this.starting_row;
+        this.col = this.starting_col;
+
         if(Config.ls.getItem('bg') === 'space') {
             this.tileMatrix = Constants.space_matrix;
         } else {
             this.tileMatrix = Constants.forest_matrix;
         }
 
-        this.initController();
         this.initSprite();
     },
 
@@ -184,11 +249,9 @@ var AnimationLayer = cc.Layer.extend({
         return this.s.height / Constants.bg.height;
     },
 
-    toggleVisibility: function() {
-        var visible = this.sprite.visible;
-        Config.ls.setItem('player' + this.character_id + 'Viz', !visible);
-        this.sprite.visible = !visible;
-    },
+//    toggleVisibility: function() {
+//        this.setVisibility(!this.sprite.visible)
+//    },
 
     setVisibility: function(visible) {
         Config.ls.setItem('player' + this.character_id + 'Viz', visible);
@@ -225,6 +288,11 @@ var AnimationLayer = cc.Layer.extend({
             });
             that.sprite.runAction(that.runningAction);
         });
+    },
+
+    resetSprite: function() {
+        that.move('reset');
+        that.resetStyle(0.1);
     },
 
     delay: function(delay, func) {
@@ -526,17 +594,6 @@ var AnimationLayer = cc.Layer.extend({
         this.resetStyle(animationDuration);
     },
 
-    changeBg: function () {
-        // background setting stores in local storage
-        // implemented in GameConfig.js
-        if(Config.ls.getItem('bg') === 'space') {
-            Config.ls.setItem('bg', 'forest');
-        } else {
-            Config.ls.setItem('bg', 'space');
-        }
-        cc.game.run();
-    },
-
     setColor: function(color_id) {
         Config.ls.setItem('princess'+this.character_id, color_id);
         cc.game.run();
@@ -551,5 +608,4 @@ var AnimationLayer = cc.Layer.extend({
         });
         cc.eventManager.dispatchEvent(event);
     }
-
 });
