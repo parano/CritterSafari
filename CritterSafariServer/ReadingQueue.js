@@ -64,7 +64,7 @@ ReadingQueue.prototype.isEmpty = function() {
 ReadingQueue.prototype.responseOject = function(s) {
   var response_object = {};
 
-  if(this.isSettingCommand(s)) {
+  if(this.isSettingComand(s)) {
     response_object.type  = s.slice(0, s.lastIndexOf(' '));
     response_object.value = _.last(s.split(' ')); 
   } else if(s.indexOf('start') === 0) {

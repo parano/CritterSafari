@@ -6,6 +6,7 @@ var GameScene = cc.Scene.extend({
     playerB: null,
     bg: null,
     objLayer: null,
+    controller: null,
 
     onEnter:function () {
         this._super();
@@ -22,7 +23,9 @@ var GameScene = cc.Scene.extend({
 
         this.objLayer =new ObjectsLayer();
         this.addChild(this.objLayer);
-        this.addChild(new ControllerLayer());
+
+        this.controller = new ControllerLayer()
+        this.addChild(this.controller);
     },
 
     resetAll: function(){

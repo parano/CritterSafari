@@ -5,7 +5,6 @@
 var ControllerLayer = cc.Layer.extend({
     //StatusLabel for debugging only
     //xhrStatusLabel: null,
-
     commandSequence: [],
 
     ctor:function () {
@@ -19,11 +18,11 @@ var ControllerLayer = cc.Layer.extend({
         this._super();
         this.keyboardEventListener();
 
-//        setInterval(function(){
-//            that.sendGetRequest();
-//        }, 200);
+        setInterval(function(){
+            that.sendGetRequest();
+            that.dispatchInstruction();
+        }, 200);
     },
-
 
     keyboardEventListener: function(){
         var that = this;
@@ -173,7 +172,7 @@ var ControllerLayer = cc.Layer.extend({
                             event = new cc.EventCustom('action');
                             event.setUserData({
                                 player_id: +Config.ls.getItem('controller'),
-                                action: 'sleeping'
+                                action: 'sleep'
                             });
                             cc.eventManager.dispatchEvent(event);
                             break;
@@ -273,7 +272,122 @@ var ControllerLayer = cc.Layer.extend({
         };
 
         xhr.send();
+    },
+
+    initGame: function(){
+        var event = new cc.EventCustom('changeSetting');
+        event.setUserData({
+            target: 'reset'
+        });
+        cc.eventManager.dispatchEvent(event);
+    },
+
+    color_id: {
+        'pink': 0,
+        'green': 1,
+        'blue': 2
+    },
+
+    object_id: {
+        'fox': 0,
+        'monkey': 1,
+        'pig': 2,
+        'rabbit': 3
+    },
+
+    isRunning: false,
+
+    dispatchInstruction: function() {
+        if(this.commandSequence.length !== 0) {
+            var that = this;
+            var commandObject = this.commandSequence.shift();
+            var event;
+
+            switch(commandObject.type) {
+                case 'show character':
+                    event = new cc.EventCustom('updateCharacter');
+                    event.setUserData({
+                        player_id: +Config.ls.getItem('controller'),
+                        event: 'color',
+                        value: this.color_id[commandObject.value],
+                        isRunning: this.isRunning
+                    });
+                    cc.eventManager.dispatchEvent(event);
+                    break;
+                case 'hide character':
+                    event = new cc.EventCustom('updateCharacter');
+                    event.setUserData({
+                        player_id: +Config.ls.getItem('controller'),
+                        event: 'updateVisibility',
+                        value: false,
+                        isRunning: this.isRunning
+                    });
+                    cc.eventManager.dispatchEvent(event);
+                    break;
+                case 'add object':
+                    event = new cc.EventCustom('objects');
+                    event.setUserData({
+                        targetObject: this.object_id[commandObject.value],
+                        visible: true,
+                        isRunning: this.isRunning
+                    });
+                    cc.eventManager.dispatchEvent(event);
+                    break;
+                case 'remove object':
+                    event = new cc.EventCustom('objects');
+                    event.setUserData({
+                        targetObject: this.object_id[commandObject.value],
+                        visible: false,
+                        isRunning: this.isRunning
+                    });
+                    cc.eventManager.dispatchEvent(event);
+                    break;
+                case 'set bg':
+                    event = new cc.EventCustom('changeSetting');
+                    event.setUserData({
+                        target: 'board',
+                        bg: commandObject.value,
+                        isRunning: this.isRunning
+                    });
+                    cc.eventManager.dispatchEvent(event);
+                    break;
+                case 'run':
+                    this.run(commandObject.steps, commandObject.func);
+                    break;
+            }
+        }
+    },
+
+    steps: null,
+    funcSteps: null,
+    run: function(steps, funcSteps) {
+        this.isRunning = true;
+        this.steps = steps;
+        this.funcSteps = funcSteps;
+        this.executeNext();
+    },
+
+    executeNext: function(steps) {
+        if(steps && steps.length === 0) {
+            this.isRunning = false;
+            this.steps = null;
+            this.funcSteps = null;
+            setTimeout(this.initGame, 2000);
+        } else {
+            var current_step = this.steps.shift();
+            if(current_step === 'function') {
+                if(this.funcSteps) {
+                    this.steps = this.funcSteps.concat(this.steps);
+                }
+                this.executeNext();
+            } else {
+                event = new cc.EventCustom('action');
+                event.setUserData({
+                    player_id: +Config.ls.getItem('controller'),
+                    action: 'love'
+                });
+                cc.eventManager.dispatchEvent(event);
+            }
+        }
     }
-
-
 });

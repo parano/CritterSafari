@@ -70,7 +70,7 @@ var AnimationLayer = cc.Layer.extend({
                     } else if(actionType === 'dance') {
                         that.dispatchActionEvent('dancing');
                         that.actionDancing();
-                    } else if(actionType === 'sleeping') {
+                    } else if(actionType === 'sleep') {
                         that.dispatchActionEvent('sleeping');
                         that.actionSleep();
                     } else if(actionType === 'dressup') {
@@ -271,6 +271,7 @@ var AnimationLayer = cc.Layer.extend({
 
         // reset style and clean particles
         this.resetStyle(duration);
+        this.delay(duration, this.parent.controller.executeNext);
     },
 
     resetStyle: function(delay) {
@@ -370,6 +371,7 @@ var AnimationLayer = cc.Layer.extend({
 
         AudioPlayer.playDancingEffect(animationDuration - 0.2);
         this.resetStyle(animationDuration);
+        this.delay(animationDuration, this.parent.controller.executeNext);
     },
 
     emitters: [],
@@ -411,6 +413,7 @@ var AnimationLayer = cc.Layer.extend({
 
         AudioPlayer.playMagicEffect(animationDuration - 0.2);
         this.resetStyle(animationDuration);
+        this.delay(animationDuration, this.parent.controller.executeNext);
     },
 
     actionTantrum: function() {
@@ -448,6 +451,7 @@ var AnimationLayer = cc.Layer.extend({
 
         AudioPlayer.playTantrumEffect(animationDuration - 0.2);
         this.resetStyle(animationDuration);
+        this.delay(animationDuration, this.parent.controller.executeNext);
     },
 
     actionLove: function() {
@@ -529,6 +533,7 @@ var AnimationLayer = cc.Layer.extend({
 
         AudioPlayer.playLoveEffect(animationDuration - 0.2);
         this.resetStyle(animationDuration);
+        this.delay(animationDuration, this.parent.controller.executeNext);
     },
 
     actionSleep: function() {
@@ -552,6 +557,7 @@ var AnimationLayer = cc.Layer.extend({
 
         AudioPlayer.playSleepEffect(animationDuration - 0.2);
         this.resetStyle(animationDuration);
+        this.delay(animationDuration, this.parent.controller.executeNext);
     },
 
     actionDressUp: function() {
@@ -592,9 +598,11 @@ var AnimationLayer = cc.Layer.extend({
 
         AudioPlayer.playDressUpEffect(animationDuration - 0.2);
         this.resetStyle(animationDuration);
+        this.delay(animationDuration, this.parent.controller.executeNext);
     },
 
     setColor: function(color_id) {
+        this.setVisibility(true);
         Config.ls.setItem('princess'+this.character_id, color_id);
         this.parent.resetAll();
     },
