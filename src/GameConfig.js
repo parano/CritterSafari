@@ -54,7 +54,7 @@ var Config = {
         this.ls.setItem('princess1', this.default_princess_id_1);
         this.ls.setItem('princess2', this.default_princess_id_2);
         this.ls.setItem('controller', this.default_controller_id);
-        this.ls.setItem('player1Vis', false);
+        this.ls.setItem('player1Vis', true);
         this.ls.setItem('player2Vis', false);
         this.ls.setItem('foxVis', false);
         this.ls.setItem('monkeyVis', false);

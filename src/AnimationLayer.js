@@ -143,8 +143,9 @@ var AnimationLayer = cc.Layer.extend({
             //scaleY: this.scaleRatioY(),
             x: this.px(),
             y: this.py(),
-            visible: Config.ls.getItem(Config.ls.getItem('player'+ this.character_id +'Viz'))
+            visible: (Config.ls.getItem('player'+ this.character_id +'Viz') === 'true')
         });
+        //console.log((Config.ls.getItem('player'+ this.character_id +'Viz') === 'true'));
         this.sprite.setScaleY(this.scaleRatioY());
         this.sprite.setScaleX(this.scaleRatioX());
 
@@ -187,6 +188,11 @@ var AnimationLayer = cc.Layer.extend({
         var visible = this.sprite.visible;
         Config.ls.setItem('player' + this.character_id + 'Viz', !visible);
         this.sprite.visible = !visible;
+    },
+
+    setVisibility: function(visible) {
+        Config.ls.setItem('player' + this.character_id + 'Viz', visible);
+        this.sprite.visible = visible;
     },
 
     updatePosition: function(duration) {

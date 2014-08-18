@@ -36,9 +36,9 @@ var ObjectsLayer = cc.Layer.extend({
             scaleX: 1.7*this.scaleRatioX(),
             scaleY: 1.7*this.scaleRatioY(),
             x: this.px(row, col),
-            y: this.py(row, col)
+            y: this.py(row, col),
+            visible: (Config.ls.getItem(this.object_names[index]+'Viz') === 'true')
         });
-        this.sprites[index].visible = Config.ls.getItem(this.object_names[index]+'Viz');
     },
 
 

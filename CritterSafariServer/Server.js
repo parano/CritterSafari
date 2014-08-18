@@ -5,10 +5,10 @@ var ReadingQueue = require('./ReadingQueue');
 var commandQueue = new ReadingQueue();
 //console.log(commandQueue);
 
-var settingBoard = new GameboardReader("/dev/cu.usbmodem1421", 9600, function(data){
-  console.log("data received: " + data);
-  commandQueue.push(data);
-});
+//var settingBoard = new GameboardReader("/dev/cu.usbmodem1421", 9600, function(data){
+//  console.log("data received: " + data);
+//  commandQueue.push(data);
+//});
 
 var instructionBoard = new GameboardReader("/dev/cu.usbmodem1411", 9600, function(data){
   console.log("data received: " + data);
