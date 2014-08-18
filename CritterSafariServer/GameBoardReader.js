@@ -8,22 +8,14 @@ function GameboardReader(port, baudrate, callback) {
   });
 
   this.sp.on('open', function() {
-    console.log('Port open');
+    console.log('Serial Port: ' + port + 
+                ", start listening at baudrate: " + baudrate);
   });
 
   this.sp.on('data', function(data) {
     callback(data);
   });
 }
-
-
-function logger(){
-  var gbr = new GameboardReader("/dev/cu.usbmodem1411", 9600, function(data){
-    console.log("data received: " + data);
-  });
-}
-
-//logger();
 
 module.exports = GameboardReader;
 

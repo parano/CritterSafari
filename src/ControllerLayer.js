@@ -6,8 +6,11 @@ var ControllerLayer = cc.Layer.extend({
     //StatusLabel for debugging only
     //xhrStatusLabel: null,
 
+    commandSequence: [],
+
     ctor:function () {
         this._super();
+        this.commandSequence = [];
         this.init();
     },
 
@@ -44,6 +47,7 @@ var ControllerLayer = cc.Layer.extend({
                 } else {
                     //that.xhrStatusLabel.setString(responseObject.data);
                     console.log(responseObject.data);
+                    that.commandSequence.push(responseObject.data);
                 }
             } else {
                 //that.xhrStatusLabel.setString("Serve Problem, Error Code: " + xhr.status);

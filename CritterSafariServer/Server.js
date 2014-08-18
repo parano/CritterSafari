@@ -3,22 +3,19 @@ var GameboardReader = require('./GameboardReader');
 var ReadingQueue = require('./ReadingQueue');
 
 var commandQueue = new ReadingQueue();
-
 //console.log(commandQueue);
 
 var settingBoard = new GameboardReader("/dev/cu.usbmodem1421", 9600, function(data){
-  //console.log("data received: " + data);
+  console.log("data received: " + data);
   commandQueue.push(data);
 });
 
 var instructionBoard = new GameboardReader("/dev/cu.usbmodem1411", 9600, function(data){
-  //console.log("data received: " + data);
+  console.log("data received: " + data);
   commandQueue.push(data);
 });
 
-
 var app = express();
-
 app.get('/instruction.json', function(req, res){
   res.setHeader("Access-Control-Allow-Origin", "*");
 
@@ -37,4 +34,5 @@ app.get('/instruction.json', function(req, res){
 var server = app.listen(3000, function() {
   console.log('Listening on port %d', server.address().port);
 });
+
 
