@@ -16,6 +16,7 @@ var AnimationLayer = cc.Layer.extend({
     colors: ['pink', 'green', 'blue'],
     color: null,
     character_id: null,
+    animationGap: 300,
 
     ctor: function (character_id, starting_row, starting_col) {
         this._super();
@@ -34,8 +35,8 @@ var AnimationLayer = cc.Layer.extend({
             event: cc.EventListener.CUSTOM,
             eventName: 'updateCharacter',
             callback: function(event){
-                console.log('update character event received');
                 var data = event.getUserData();
+                //console.log(data);
 
                 if(data.player_id === that.character_id) {
                     if(data.event === 'updateVisibility') {
@@ -52,9 +53,11 @@ var AnimationLayer = cc.Layer.extend({
             event: cc.EventListener.CUSTOM,
             eventName: 'action',
             callback: function(event){
-                console.log('action event received');
+                //console.log('action event received');
 
                 var data = event.getUserData();
+                //console.log(data);
+
                 var actionType = data.action;
 
                 if(data.player_id === that.character_id) {
@@ -90,7 +93,6 @@ var AnimationLayer = cc.Layer.extend({
             }
         });
         cc.eventManager.addListener(this.actionListener, 1);
-
 
 //        if ('keyboard' in cc.sys.capabilities) {
 //            cc.eventManager.addListener({
@@ -176,7 +178,6 @@ var AnimationLayer = cc.Layer.extend({
 //            }
 //        });
 //        cc.eventManager.addListener(resetBoardListener, 1);
-
     },
 
     initSprite: function() {
@@ -271,7 +272,7 @@ var AnimationLayer = cc.Layer.extend({
 
         // reset style and clean particles
         this.resetStyle(duration);
-        this.delay(duration, this.parent.controller.executeNext);
+        setTimeout(this.runNext, duration*1000 + this.animationGap);
     },
 
     resetStyle: function(delay) {
@@ -371,7 +372,7 @@ var AnimationLayer = cc.Layer.extend({
 
         AudioPlayer.playDancingEffect(animationDuration - 0.2);
         this.resetStyle(animationDuration);
-        this.delay(animationDuration, this.parent.controller.executeNext);
+        setTimeout(this.runNext, animationDuration*1000 + this.animationGap);
     },
 
     emitters: [],
@@ -413,7 +414,7 @@ var AnimationLayer = cc.Layer.extend({
 
         AudioPlayer.playMagicEffect(animationDuration - 0.2);
         this.resetStyle(animationDuration);
-        this.delay(animationDuration, this.parent.controller.executeNext);
+        setTimeout(this.runNext, animationDuration*1000 + this.animationGap);
     },
 
     actionTantrum: function() {
@@ -451,7 +452,7 @@ var AnimationLayer = cc.Layer.extend({
 
         AudioPlayer.playTantrumEffect(animationDuration - 0.2);
         this.resetStyle(animationDuration);
-        this.delay(animationDuration, this.parent.controller.executeNext);
+        setTimeout(this.runNext, animationDuration*1000 + this.animationGap);
     },
 
     actionLove: function() {
@@ -533,7 +534,7 @@ var AnimationLayer = cc.Layer.extend({
 
         AudioPlayer.playLoveEffect(animationDuration - 0.2);
         this.resetStyle(animationDuration);
-        this.delay(animationDuration, this.parent.controller.executeNext);
+        setTimeout(this.runNext, animationDuration*1000 + this.animationGap);
     },
 
     actionSleep: function() {
@@ -557,7 +558,7 @@ var AnimationLayer = cc.Layer.extend({
 
         AudioPlayer.playSleepEffect(animationDuration - 0.2);
         this.resetStyle(animationDuration);
-        this.delay(animationDuration, this.parent.controller.executeNext);
+        setTimeout(this.runNext, animationDuration*1000 + this.animationGap);
     },
 
     actionDressUp: function() {
@@ -598,12 +599,17 @@ var AnimationLayer = cc.Layer.extend({
 
         AudioPlayer.playDressUpEffect(animationDuration - 0.2);
         this.resetStyle(animationDuration);
-        this.delay(animationDuration, this.parent.controller.executeNext);
+        setTimeout(this.runNext, animationDuration*1000 + this.animationGap);
+    },
+
+    runNext: function(){
+        var event = new cc.EventCustom('runNext');
+        cc.eventManager.dispatchEvent(event);
     },
 
     setColor: function(color_id) {
         this.setVisibility(true);
-        Config.ls.setItem('princess'+this.character_id, color_id);
+        Config.ls.setItem('princess' + this.character_id, color_id);
         this.parent.resetAll();
     },
 

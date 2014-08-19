@@ -47,7 +47,9 @@ ReadingQueue.prototype.isSettingCommand = function(command) {
 }
 
 ReadingQueue.prototype.next = function() {
-  return this.responseOject(this.queue.shift());
+  var res = this.responseOject(this.queue.shift());
+  console.log(res);
+  return res;
 }
 
 ReadingQueue.prototype.push = function(data) {
@@ -64,7 +66,7 @@ ReadingQueue.prototype.isEmpty = function() {
 ReadingQueue.prototype.responseOject = function(s) {
   var response_object = {};
 
-  if(this.isSettingComand(s)) {
+  if(this.isSettingCommand(s)) {
     response_object.type  = s.slice(0, s.lastIndexOf(' '));
     response_object.value = _.last(s.split(' ')); 
   } else if(s.indexOf('start') === 0) {

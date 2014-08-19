@@ -64,15 +64,17 @@ var BackgroundLayer = cc.Layer.extend({
 
     },
 
+    eventListener: null,
     setListeners: function(){
         var that = this;
         this.eventListener = cc.EventListener.create({
             event: cc.EventListener.CUSTOM,
             eventName: 'changeSetting',
             callback: function(event){
-                console.log('change setting event received');
                 var data = event.getUserData();
+                console.log(data);
                 if(data.target === 'reset') {
+                    console.log('resetting');
                     Config.ls.setItem('controller', 1);
                     that.parent.resetAll();
                 } else if (data.target === 'board') {

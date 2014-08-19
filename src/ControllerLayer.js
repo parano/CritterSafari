@@ -6,22 +6,52 @@ var ControllerLayer = cc.Layer.extend({
     //StatusLabel for debugging only
     //xhrStatusLabel: null,
     commandSequence: [],
+    color_id: null,
+    object_id: null,
 
     ctor:function () {
         this._super();
         this.commandSequence = [];
+
+        this.color_id = {
+            pink: 0,
+            green: 1,
+            blue: 2
+        };
+
+        this.object_id = {
+            fox: 0,
+            monkey: 1,
+            pig: 2,
+            rabbit: 3
+        };
+
         this.init();
     },
 
     init:function () {
         var that = this;
         this._super();
-        this.keyboardEventListener();
+        //this.keyboardEventListener();
+
+        this.initListener();
 
         setInterval(function(){
             that.sendGetRequest();
             that.dispatchInstruction();
         }, 200);
+    },
+
+    initListener: function() {
+        var that = this;
+        this.runNextListener = cc.EventListener.create({
+            event: cc.EventListener.CUSTOM,
+            eventName: 'runNext',
+            callback: function(event){
+                that.executeNext();
+            }
+        });
+        cc.eventManager.addListener(this.runNextListener, 1);
     },
 
     keyboardEventListener: function(){
@@ -274,42 +304,25 @@ var ControllerLayer = cc.Layer.extend({
         xhr.send();
     },
 
-    initGame: function(){
-        var event = new cc.EventCustom('changeSetting');
-        event.setUserData({
-            target: 'reset'
-        });
-        cc.eventManager.dispatchEvent(event);
-    },
 
-    color_id: {
-        'pink': 0,
-        'green': 1,
-        'blue': 2
-    },
-
-    object_id: {
-        'fox': 0,
-        'monkey': 1,
-        'pig': 2,
-        'rabbit': 3
-    },
 
     isRunning: false,
 
     dispatchInstruction: function() {
-        if(this.commandSequence.length !== 0) {
+        if(this.commandSequence.length > 0) {
             var that = this;
             var commandObject = this.commandSequence.shift();
             var event;
 
-            switch(commandObject.type) {
+            //console.log(commandObject);
+
+            switch(commandObject.type.trim()) {
                 case 'show character':
                     event = new cc.EventCustom('updateCharacter');
                     event.setUserData({
                         player_id: +Config.ls.getItem('controller'),
                         event: 'color',
-                        value: this.color_id[commandObject.value],
+                        value: this.color_id[commandObject.value.trim()],
                         isRunning: this.isRunning
                     });
                     cc.eventManager.dispatchEvent(event);
@@ -327,7 +340,7 @@ var ControllerLayer = cc.Layer.extend({
                 case 'add object':
                     event = new cc.EventCustom('objects');
                     event.setUserData({
-                        targetObject: this.object_id[commandObject.value],
+                        targetObject: this.object_id[commandObject.value.trim()],
                         visible: true,
                         isRunning: this.isRunning
                     });
@@ -336,7 +349,7 @@ var ControllerLayer = cc.Layer.extend({
                 case 'remove object':
                     event = new cc.EventCustom('objects');
                     event.setUserData({
-                        targetObject: this.object_id[commandObject.value],
+                        targetObject: this.object_id[commandObject.value.trim()],
                         visible: false,
                         isRunning: this.isRunning
                     });
@@ -354,6 +367,8 @@ var ControllerLayer = cc.Layer.extend({
                 case 'run':
                     this.run(commandObject.steps, commandObject.func);
                     break;
+                default:
+                    break;
             }
         }
     },
@@ -361,33 +376,47 @@ var ControllerLayer = cc.Layer.extend({
     steps: null,
     funcSteps: null,
     run: function(steps, funcSteps) {
-        this.isRunning = true;
-        this.steps = steps;
-        this.funcSteps = funcSteps;
-        this.executeNext();
+        if(!this.isRunning) {
+            this.isRunning = true;
+            this.steps = steps;
+            this.funcSteps = funcSteps;
+            this.executeNext();
+        }
     },
 
-    executeNext: function(steps) {
-        if(steps && steps.length === 0) {
-            this.isRunning = false;
-            this.steps = null;
-            this.funcSteps = null;
-            setTimeout(this.initGame, 2000);
-        } else {
-            var current_step = this.steps.shift();
+    executeNext: function() {
+        var that = this;
+        if(this.steps && this.steps.length > 0){
+            var current_step = this.steps.shift().trim();
+            console.log("current step: " + current_step);
             if(current_step === 'function') {
                 if(this.funcSteps) {
                     this.steps = this.funcSteps.concat(this.steps);
                 }
                 this.executeNext();
             } else {
-                event = new cc.EventCustom('action');
+                var event = new cc.EventCustom('action');
                 event.setUserData({
                     player_id: +Config.ls.getItem('controller'),
-                    action: 'love'
+                    action: current_step
                 });
                 cc.eventManager.dispatchEvent(event);
             }
+        } else {
+            this.isRunning = false;
+            this.steps = null;
+            this.funcSteps = null;
+            setTimeout(function(){
+                that.resetGameSettings();
+            }, 1200);
         }
+    },
+
+    resetGameSettings: function() {
+        var event = new cc.EventCustom('changeSetting');
+        event.setUserData({
+            target: 'reset'
+        });
+        cc.eventManager.dispatchEvent(event);
     }
 });
