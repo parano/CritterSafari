@@ -75,7 +75,6 @@ var BackgroundLayer = cc.Layer.extend({
                 console.log(data);
                 if(data.target === 'reset') {
                     console.log('resetting');
-                    Config.ls.setItem('controller', 1);
                     that.parent.resetAll();
                 } else if (data.target === 'board') {
                     that.setBg(data.bg);

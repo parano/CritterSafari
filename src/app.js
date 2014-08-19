@@ -29,6 +29,8 @@ var GameScene = cc.Scene.extend({
     },
 
     resetAll: function(){
+        Config.ls.setItem('controller', 1);
+
         this.bg.removeChild(this.bg.spriteBG, true);
         this.bg.init();
 
@@ -43,6 +45,7 @@ var GameScene = cc.Scene.extend({
         this.objLayer.hideAllSprites();
         this.objLayer.init();
 
+        this.controller.resetController();
     }
 });
 

@@ -403,13 +403,16 @@ var ControllerLayer = cc.Layer.extend({
                 cc.eventManager.dispatchEvent(event);
             }
         } else {
-            this.isRunning = false;
-            this.steps = null;
-            this.funcSteps = null;
             setTimeout(function(){
                 that.resetGameSettings();
             }, 1200);
         }
+    },
+
+    resetController: function(){
+        this.isRunning = false;
+        this.steps = null;
+        this.funcSteps = null;
     },
 
     resetGameSettings: function() {
