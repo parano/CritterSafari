@@ -90,6 +90,9 @@ var AnimationLayer = cc.Layer.extend({
                     } else if(actionType === 'tantrum') {
                         that.dispatchActionEvent('tantrum');
                         that.actionTantrum();
+                    } else {
+                        // for invalid action type
+                        that.runNext();
                     }
                 }
             }
