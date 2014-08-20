@@ -15,7 +15,6 @@
         "src/App.js",
         "src/AnimationLayer.js",
         "src/BackgroundLayer.js",
-        "src/StatusLayer.js",
         "src/GameConfig.js",
         "src/AudioPlayer.js",
         "src/ObjectsLayer.js",

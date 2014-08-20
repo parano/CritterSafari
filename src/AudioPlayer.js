@@ -1,8 +1,6 @@
 /**
- * Created by maccha on 8/11/14.
+ * Created by Chaoyu Yang on 8/11/14.
  */
-
-
 var AudioPlayer = {
     audioEngine: null,
     init: function() {
@@ -15,13 +13,11 @@ var AudioPlayer = {
     stopMusicAfter: function(delay) {
         var that = this;
         setTimeout(function() {
-            cc.log("stop!");
             that.audioEngine.stopMusic();
         }, delay * 1000);
     },
 
     playDancingEffect: function(delay){
-        //cc.log("dancing sound effect playing...");
         this.audioEngine.playMusic(res.dancing_mp3, false);
         this.stopMusicAfter(delay);
     },
@@ -57,44 +53,3 @@ var AudioPlayer = {
 };
 
 AudioPlayer.init();
-
-/*
- * sample code from cocos2d test
-
-var playMusic = function () {
-    cc.log("play background music");
-    audioEngine.playMusic(MUSIC_FILE, false);
-};
-
-var stopMusic = function () {
-    cc.log("stop background music");
-    audioEngine.stopMusic();
-};
-
-
-// is background music playing
-var isMusicPlaying = function () {
-    if (audioEngine.isMusicPlaying()) {
-        cc.log("background music is playing");
-    }
-    else {
-        cc.log("background music is not playing");
-    }
-};
-
-var playEffect = function () {
-    cc.log("play effect");
-    soundId = audioEngine.playEffect(EFFECT_FILE);
-};
-
-var playEffectRepeatly = function () {
-    cc.log("play effect repeatly");
-    soundId = audioEngine.playEffect(EFFECT_FILE, true);
-};
-
-var stopEffect = function () {
-    cc.log("stop effect");
-    audioEngine.stopEffect(soundId);
-};
-
-*/

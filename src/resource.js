@@ -61,13 +61,6 @@ var g_resources = [
     res.dressup_mp3,
     res.love_mp3,
     res.tantrum_mp3,
-    //fnt
-
-    //tmx
-
-    //bgm
-
-    //effect
 
     //objects
     res.fox_plist,

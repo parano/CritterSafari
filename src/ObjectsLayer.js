@@ -17,11 +17,6 @@ var ObjectsLayer = cc.Layer.extend({
     sleepingFrames: [[],[],[],[]],
     tileMatrix: null,
 
-//    foxSprite: null,
-//    monkeySprite: null,
-//    pigSprite: null,
-//    rabbitSprite: null,
-
     ctor: function() {
         this._super();
         this.init();
@@ -102,36 +97,6 @@ var ObjectsLayer = cc.Layer.extend({
             this.initAnimations(i);
         }
     },
-
-//    setKeyboardListeners: function(){
-//        var that = this;
-//        if ('keyboard' in cc.sys.capabilities) {
-//            cc.eventManager.addListener({
-//                event: cc.EventListener.KEYBOARD,
-//                onKeyPressed: function (key) {
-//                    //cc.log("Key down:" + key);
-//                },
-//                onKeyReleased: function (key) {
-//                    cc.log("Key up:" + key);
-//                    switch(key) {
-//                        case 54: // press 6
-//                            that.toggleVisibility(0);
-//                            break;
-//                        case 55: // press 7
-//                            that.toggleVisibility(1);
-//                            break;
-//                        case 56: // press 8
-//                            that.toggleVisibility(2);
-//                            break;
-//                        case 57: // press 9
-//                            that.toggleVisibility(3);
-//                            break;
-//                    }
-//                }
-//            }, this);
-//        }
-//        this.setAllListeners();
-//    },
 
     toggleVisibility: function(index) {
         var visible = this.sprites[index].visible;
@@ -331,14 +296,11 @@ var ObjectsLayer = cc.Layer.extend({
         var that = this;
         setTimeout(function() {
             that.resetSprite(index);
-              //that.sprites_default_images[index]);
-//            that.sprites[index].setDisplayFrame(
-//                that.sprites_default_images[index]
-//            )
         }, delay * 1000);
     },
     resetSprite: function(index) {
-        cc.log(this.sprites[index]);
+        // reset object sprite to first frame
+        //cc.log(this.sprites[index]);
     },
     hideAllSprites: function() {
         for(var i=0; i<4; i++) {

@@ -1,5 +1,5 @@
 /**
- * Created by maccha on 8/10/14.
+ * Created by Chaoyu Yang on 8/10/14.
  */
 var GameScene = cc.Scene.extend({
     playerA: null,
@@ -19,8 +19,6 @@ var GameScene = cc.Scene.extend({
         this.addChild(this.playerA);
         this.addChild(this.playerB); // second player
 
-        this.addChild(new StatusLayer());
-
         this.objLayer =new ObjectsLayer();
         this.addChild(this.objLayer);
 
@@ -28,8 +26,10 @@ var GameScene = cc.Scene.extend({
         this.addChild(this.controller);
     },
 
+    // load settings from local storage and restart game
     resetAll: function(){
         Config.ls.setItem('controller', 1);
+        //AudioPlayer.stopAllMusic();
 
         this.bg.removeChild(this.bg.spriteBG, true);
         this.bg.init();

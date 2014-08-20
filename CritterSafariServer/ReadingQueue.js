@@ -47,14 +47,11 @@ ReadingQueue.prototype.isSettingCommand = function(command) {
 }
 
 ReadingQueue.prototype.next = function() {
-  var res = this.responseOject(this.queue.shift());
-  console.log(res);
-  return res;
+  return this.responseOject(this.queue.shift());
 }
 
 ReadingQueue.prototype.push = function(data) {
   if(this.isValidCommand(data)) {
-    //console.log('pusing data to queue: ' + data);
     this.queue.push(data);
   }
 }

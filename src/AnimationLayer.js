@@ -40,9 +40,11 @@ var AnimationLayer = cc.Layer.extend({
 
                 if(data.player_id === that.character_id) {
                     if(data.event === 'updateVisibility') {
-                        that.setVisibility(data.value)
+                        that.setVisibility(data.value);
+                        that.parent.resetAll();
                     } else if(data.event === 'color') {
                         that.setColor(data.value);
+                        that.parent.resetAll();
                     }
                 }
             }
@@ -93,91 +95,6 @@ var AnimationLayer = cc.Layer.extend({
             }
         });
         cc.eventManager.addListener(this.actionListener, 1);
-
-//        if ('keyboard' in cc.sys.capabilities) {
-//            cc.eventManager.addListener({
-//                event: cc.EventListener.KEYBOARD,
-//                onKeyPressed: function (key, event) {
-//                    //("Key down:" + key);
-//                },
-//                onKeyReleased: function (key, event) {
-//                    //cc.log("Key up:" + key);
-//                    if(+Config.ls.getItem('controller') === that.character_id) {
-////                        cc.log(Config.ls.getItem('controller'));
-////                        cc.log(that.character_id);
-//                        switch (key) {
-//                            // move princess
-//                            case 37: // press left arrow
-//                                that.move('left');
-//                                break;
-//                            case 38: //press up arrow
-//                                that.move('up');
-//                                break;
-//                            case 39: // press right arrow
-//                                that.move('right');
-//                                break;
-//                            case 40: // press down arrow
-//                                that.move('down');
-//                                break;
-//
-//                            // change background
-//                            case 67: // press c
-//                                that.changeBg();
-//                                break;
-//
-//                            // change princess
-//                            case 81: // press q
-//                                that.setColor(0);
-//                                break;
-//                            case 87:
-//                                that.setColor(1);
-//                                break;
-//                            case 69:
-//                                that.setColor(2);
-//                                break;
-//
-//                            // actions:
-//                            case 68: // press d
-//                                that.dispatchActionEvent('dancing');
-//                                that.actionDancing();
-//                                break;
-//                            case 83: // press s
-//                                that.dispatchActionEvent('sleeping');
-//                                that.actionSleep();
-//                                break;
-//                            case 85: // press u
-//                                that.dispatchActionEvent('dressup');
-//                                that.actionDressUp();
-//                                break;
-//                            case 77: // press m
-//                                that.dispatchActionEvent('magic');
-//                                that.actionMagic()
-//                                break;
-//                            case 76: // press l
-//                                that.dispatchActionEvent('love');
-//                                that.actionLove();
-//                                break;
-//                            case 84: // press t
-//                                that.dispatchActionEvent('tantrum');
-//                                that.actionTantrum();
-//                                break;
-//                        }
-//                    }
-//                }
-//            }, this);
-//        } else {
-//            cc.log("KEYBOARD Not supported");
-//        }
-
-//        var resetBoardListener = cc.EventListener.create({
-//            event: cc.EventListener.CUSTOM,
-//            eventName: "board_reset",
-//            callback: function(event) {
-//                that.move('reset');
-//                that.resetStyle(0.1);
-//            }
-//        });
-//        cc.eventManager.addListener(resetBoardListener, 1);
     },
 
     initSprite: function() {
@@ -205,7 +122,6 @@ var AnimationLayer = cc.Layer.extend({
             y: this.py(),
             visible: (Config.ls.getItem('player'+ this.character_id +'Viz') === 'true')
         });
-        //console.log((Config.ls.getItem('player'+ this.character_id +'Viz') === 'true'));
         this.sprite.setScaleY(this.scaleRatioY());
         this.sprite.setScaleX(this.scaleRatioX());
 
@@ -216,8 +132,6 @@ var AnimationLayer = cc.Layer.extend({
     init: function () {
         this._super();
         this.s = cc.director.getWinSize();
-        //cc.director.setContentScaleFactor(Constants.bg.width * 1.5 / this.s.width);
-
 
         var color_id = Config.ls.getItem('princess' + this.character_id);
         this.color = this.colors[color_id];
@@ -249,10 +163,6 @@ var AnimationLayer = cc.Layer.extend({
     scaleRatioY: function() {
         return this.s.height / Constants.bg.height;
     },
-
-//    toggleVisibility: function() {
-//        this.setVisibility(!this.sprite.visible)
-//    },
 
     setVisibility: function(visible) {
         Config.ls.setItem('player' + this.character_id + 'Viz', visible);
@@ -343,16 +253,7 @@ var AnimationLayer = cc.Layer.extend({
     },
 
     actionDancing: function () {
-        cc.log("Dancing Playing!!!");
-
-        //blink
-        //var blinkAction = cc.Blink.create(4,20);
-
-        //rotate
-        //var rotateAction = cc.Sequence.create(
-        //    cc.RotateTo.create(0.5, -90),
-        //    cc.RotateTo.create(0.5, 90)
-        //);
+        console.log("Dancing Playing!!!");
 
         var animationDuration = 4;
         var distance = 80 * this.scaleRatioX();
@@ -377,7 +278,7 @@ var AnimationLayer = cc.Layer.extend({
 
     emitters: [],
     actionMagic: function() {
-        cc.log("magic");
+        console.log("magic");
 
         var animationDuration = 4;
         var distance = 50*this.scaleRatioX();
@@ -418,7 +319,7 @@ var AnimationLayer = cc.Layer.extend({
     },
 
     actionTantrum: function() {
-        cc.log("Tantrum");
+        console.log("Tantrum");
 
         this.sprite.stopAllActions();
         this.sprite.setSpriteFrame(
@@ -456,7 +357,7 @@ var AnimationLayer = cc.Layer.extend({
     },
 
     actionLove: function() {
-        cc.log("love");
+        console.log("love");
         var animationDuration = 4;
 
         var emitter = cc.ParticleSystem.create();
@@ -538,7 +439,7 @@ var AnimationLayer = cc.Layer.extend({
     },
 
     actionSleep: function() {
-        cc.log("sleeping");
+        console.log("sleeping");
         var animationDuration = 5;
 
         this.sprite.stopAllActions();
@@ -562,7 +463,7 @@ var AnimationLayer = cc.Layer.extend({
     },
 
     actionDressUp: function() {
-        cc.log("dress up");
+        console.log("dress up");
         var animationDuration = 4;
         var fps = 10;
         var that = this;
@@ -610,7 +511,6 @@ var AnimationLayer = cc.Layer.extend({
     setColor: function(color_id) {
         this.setVisibility(true);
         Config.ls.setItem('princess' + this.character_id, color_id);
-        this.parent.resetAll();
     },
 
     dispatchActionEvent: function(action) {

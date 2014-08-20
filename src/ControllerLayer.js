@@ -1,10 +1,7 @@
 /**
- * Created by Chaoyu on 8/16/14.
+ * Created by Chaoyu Yang on 8/16/14.
  */
-
 var ControllerLayer = cc.Layer.extend({
-    //StatusLabel for debugging only
-    //xhrStatusLabel: null,
     commandSequence: [],
     color_id: null,
     object_id: null,
@@ -32,6 +29,8 @@ var ControllerLayer = cc.Layer.extend({
     init:function () {
         var that = this;
         this._super();
+
+        // Using Keyboard Event for Wizard of oz user testing
         //this.keyboardEventListener();
 
         this.initListener();
@@ -304,25 +303,21 @@ var ControllerLayer = cc.Layer.extend({
         xhr.send();
     },
 
-
-
+    // lablelling if character is running a sequence
     isRunning: false,
-
     dispatchInstruction: function() {
         if(this.commandSequence.length > 0) {
             var that = this;
             var commandObject = this.commandSequence.shift();
             var event;
 
-            //console.log(commandObject);
-
-            switch(commandObject.type.trim()) {
+            switch(commandObject.type) {
                 case 'show character':
                     event = new cc.EventCustom('updateCharacter');
                     event.setUserData({
                         player_id: +Config.ls.getItem('controller'),
                         event: 'color',
-                        value: this.color_id[commandObject.value.trim()],
+                        value: this.color_id[commandObject.value],
                         isRunning: this.isRunning
                     });
                     cc.eventManager.dispatchEvent(event);
@@ -340,7 +335,7 @@ var ControllerLayer = cc.Layer.extend({
                 case 'add object':
                     event = new cc.EventCustom('objects');
                     event.setUserData({
-                        targetObject: this.object_id[commandObject.value.trim()],
+                        targetObject: this.object_id[commandObject.value],
                         visible: true,
                         isRunning: this.isRunning
                     });
@@ -349,7 +344,7 @@ var ControllerLayer = cc.Layer.extend({
                 case 'remove object':
                     event = new cc.EventCustom('objects');
                     event.setUserData({
-                        targetObject: this.object_id[commandObject.value.trim()],
+                        targetObject: this.object_id[commandObject.value],
                         visible: false,
                         isRunning: this.isRunning
                     });
@@ -387,7 +382,7 @@ var ControllerLayer = cc.Layer.extend({
     executeNext: function() {
         var that = this;
         if(this.steps && this.steps.length > 0){
-            var current_step = this.steps.shift().trim();
+            var current_step = this.steps.shift();
             console.log("current step: " + current_step);
             if(current_step === 'function') {
                 if(this.funcSteps) {

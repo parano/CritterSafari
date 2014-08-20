@@ -1,5 +1,5 @@
 /**
- * Created by maccha on 8/10/14.
+ * Created by Chaoyu Yang on 8/10/14.
  */
 var Constants = {
     bg: {
@@ -20,6 +20,7 @@ var Constants = {
         [{x:236, y:840}, {x:505, y:836}, {x:737, y:853}, {x:1008, y:861}, {x:1298, y:843}],
         [{x:231, y:623}, {x:496, y:569}, {x:726, y:576}, null, {x:1312, y:595}]
     ],
+
     // fox monkey pig rabbit
     dancingFramesLen: [16, 45, 20, 37],
     dressupFramesLen: [6, 45, 10, 53],
@@ -42,7 +43,7 @@ var Constants = {
 
 var Config = {
     ls: null,
-    default_bg: "forest",
+    default_bg: "space",
     default_princess_id_1: 0,
     default_princess_id_2: 1,
     default_controller_id: 1,
@@ -63,4 +64,3 @@ var Config = {
     }
 }
 
-Config.init();

@@ -32,36 +32,6 @@ var BackgroundLayer = cc.Layer.extend({
 
         this.spriteBG.setPosition(centerPos);
         this.addChild(this.spriteBG);
-
-//        if ('keyboard' in cc.sys.capabilities) {
-//            cc.eventManager.addListener({
-//                event: cc.EventListener.KEYBOARD,
-//                onKeyPressed: function (key) {
-//                    //cc.log("Key down:" + key);
-//                },
-//                onKeyReleased: function (key) {
-//                    //cc.log("Key up:" + key);
-//                    switch(key) {
-//                        case 49:
-//                            that.parent.playerA.toggleVisibility();
-//                            break;
-//                        case 50:
-//                            that.parent.playerB.toggleVisibility();
-//                            break;
-//                        case 51: // press 3
-//                            that.setController(1);
-//                            break;
-//                        case 52: //press4
-//                            that.setController(2);
-//                            break;
-//                        case 32: // press
-//                            that.resetBoard();
-//                            break;
-//                    }
-//                }
-//            }, this);
-//        }
-
     },
 
     eventListener: null,
@@ -77,7 +47,7 @@ var BackgroundLayer = cc.Layer.extend({
                     console.log('resetting');
                     that.parent.resetAll();
                 } else if (data.target === 'board') {
-                    that.setBg(data.bg);
+                    that.setBg(data.bg.trim());
                 } else if (data.target === 'controller') {
                     that.setController(data.id);
                 }
