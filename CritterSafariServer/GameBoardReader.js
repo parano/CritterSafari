@@ -18,22 +18,3 @@ function GameboardReader(port, baudrate, callback) {
 }
 
 module.exports = GameboardReader;
-
-
-// Testing Serialport.js library:
-//var serialport = require("serialport");
-//var SerialPort = serialport.SerialPort; // localize object constructor
-
-//var sp = new SerialPort("/dev/cu.usbmodem1411", {
-//  baudrate: 9600,
-//  parser: serialport.parsers.readline("\n")
-//});
-
-//sp.on('open', function() {
-//  console.log('Port open');
-//});
-
-//sp.on('data', function(data) {
-//  console.log(data);
-//});
-
