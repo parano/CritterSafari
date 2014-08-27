@@ -1,7 +1,7 @@
 ![logo](readmeImages/critter_safari_logo.png 'logo')
 #####Engaging girls in computational thinking through tangible block programming and virtual gameplay	
 
-Master of HCI+Design 2014 Capstone project - STEM Team
+UW MHCID 2014 Capstone project - STEM Team
 
 
 
@@ -34,25 +34,11 @@ The functional prototype is divided into three parts:
 *  The tangible programming interface(including Blocks and Boards)
 *  The server application that read and host the data 
 
-This repository include all the code for the iPad game and the web server(under the ```CritterSafariServer``` folder). 
+This repository include all the code for the iPad game and the web server(under the ```CritterSafariServer``` folder). We used [Cocos2d-JS](http://www.cocos2d-x.org/wiki/Cocos2d-JS) game engine to create the iPad game. The server side is implemented using NodeJS.
 
-The tangible interface is implemented with two Arduinos, the code can be found [here](https://github.com/tarhata/CritterSafariBoard_arduino).
+The tangible interface is implemented with two Arduino UNO boards, one for the settings board and one for the programming board. The way we identify different blocks is through giving each type of blocks a different resistor, and using the analog reading on arduino to differentiate them. The related code can be found [here](https://github.com/tarhata/CritterSafariBoard_arduino).
 
-We used [Cocos2d-JS](http://www.cocos2d-x.org/wiki/Cocos2d-JS) game engine to create the iPad game, and NodeJS for the data server.
 
 ![prototype](readmeImages/functional_prototype.png 'prototype')
 
-
-
-##Team members
-
-
-Punchet Sangnil - UX Design
-
-Chaoyu Yang - Technology Implementation
-
-Gwenyth Hardiman - UX Researcher
-
-Tarhata Guiamelon - Project Manager, Strategist
-
-David Yang - Visual & Communication Design
+A video demo for this functioanl prototype is working in process, we will update soon!
