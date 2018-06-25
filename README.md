@@ -1,12 +1,13 @@
 ![logo](readmeImages/critter_safari_logo.png 'logo')
-#####Engaging girls in computational thinking through tangible block programming and virtual gameplay	
 
-UW MHCID 2014 Capstone project - STEM Team
+##### Engaging girls in computational thinking through tangible block programming and virtual gameplay	
+
+University of Washington MHCID 2014 Capstone project - STEM Team
 
 
 
 
-##Design Overview
+## Design Overview
 The design question we responded to was, **How can we engage six to eight year old girls in computational thinking through gameplay?** We focused on computational thinking because it is the foundation of computer science. It is the thought processes that entails formulating a problem into sequences of steps so that it can be effectively carried out by a computer. 
 
 Critter Safari is an animated game world that girls can define and explore using a tangible programming interface, through which they can learn and practice the basis of computational thinking. 
@@ -26,7 +27,7 @@ The whole design process is documented here in our [Process Blog](http://cseforg
 [![game overview](readmeImages/game_overview.png 'game')](https://www.youtube.com/watch?v=U2NWeVoK--Y)
 
 
-##Implementation
+## Implementation
 
 The functional prototype is divided into three parts:
 
